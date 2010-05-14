@@ -1,0 +1,80 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* reset for html5-specific elements */
+section, article, aside, header, footer, nav, dialog, figure {
+  display: block; 
+}
+
+body {
+  background: url(/images/bg-4.jpg) center;
+}
+
+#main {
+  width: 100%;
+  height: 117px;
+  background: url(/images/bg-header.png) repeat-x;
+}
+
+#header_logo {
+  float: left;
+}
+
+#site-be-opened {
+  display: block;
+  height: 53px;
+  width: 455px;
+  float: left;
+  position: relative;
+  top: 10px;
+  margin-bottom: 20px;  
+
+  :after {
+    clear: both;
+  }
+}
+
+#menu {
+  display: inline-block;
+  list-style-type: none;
+  float: left;
+}
+
+#menu > li {
+  float: left;
+  margin: 0 5px;
+  height: 35px;
+  width: 123px;
+  $bg: url(/images/sprite.png) no-repeat;
+
+  &.menu_education {
+    background: $bg;
+    background-position: 0 -244px;
+  }
+
+  &.menu_research {
+    background: $bg;
+    background-position: -124px -244px;
+  }
+
+  &.menu_entrepreneurship {
+    width: 182px;
+    background: $bg;
+    background-position: -250px -244px;
+  }
+}

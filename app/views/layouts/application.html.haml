@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Software Factory
+    = stylesheet_link_tag "style"
+  %body
+    %header#main
+      %a#header_logo{:href => root_path}
+        = image_tag "logo.png"
+      %a#site-be-opened{:href => "/pdf/Magazin_web.pdf"}
+        = image_tag "site-will-be-opened.png"
+
+      %nav#menu
+        %li.menu_education
+          / Education
+        %li.menu_research
+          / Research
+        %li.menu_entrepreneurship
+          / Enterpreneurship
+
+    = yield
