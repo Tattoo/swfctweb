@@ -1,0 +1,5 @@
+
+development:
+  adapter: mongo_mapper
+  host: localhost
+  database: swfctweb_dev
