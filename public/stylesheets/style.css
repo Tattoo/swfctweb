@@ -69,4 +69,5 @@ body {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  position: relative; }
+  float: left;
+  padding: 1em; }
