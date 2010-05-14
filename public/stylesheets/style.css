@@ -61,3 +61,12 @@ body {
     width: 182px;
     background: url(/images/sprite.png) no-repeat;
     background-position: -250px -244px; }
+
+.rounded {
+  width: 250px;
+  color: white;
+  background-color: #FF8500;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative; }

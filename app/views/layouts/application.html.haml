@@ -2,6 +2,15 @@
 %html
   %head
     %title Software Factory
+    = javascript_include_tag "jquery-1.4.1.min.js"
+    = javascript_include_tag "rounded.js"
+    :javascript
+      /*
+      $(document).ready(function(){
+        Rounded('rounded', 10, 10);
+        console.debug("foo")
+      });
+      */
     = stylesheet_link_tag "style"
   %body
     %header#main
