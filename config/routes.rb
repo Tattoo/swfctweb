@@ -1,6 +1,12 @@
 Swfctweb::Application.routes.draw do |map|
 
   root :to => "statics#index" 
+  match 'education' => "statics#education"
+  match 'research' => "statics#research"
+  match 'entrepreneurship' => "statics#entrepreneurship"
+  match 'projects' => "statics#projects"
+  match 'contact' => "statics#contact"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

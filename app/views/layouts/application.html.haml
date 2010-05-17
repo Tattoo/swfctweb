@@ -3,28 +3,33 @@
   %head
     %title Software Factory
     = javascript_include_tag "jquery-1.4.1.min.js"
-    = javascript_include_tag "rounded.js"
     :javascript
-      /*
       $(document).ready(function(){
-        Rounded('rounded', 10, 10);
-        console.debug("foo")
+        $("#menu > li").click(function(){
+          window.location.href = $(this).children("a").attr("href");
+        });
       });
-      */
     = stylesheet_link_tag "style"
   %body
-    %header#main
+    %header
       %a#header_logo{:href => root_path}
         = image_tag "logo.png"
-      %a#site-be-opened{:href => "/pdf/Magazin_web.pdf"}
+
+      %a#site-be-opened{:href => "/pdf/magazin1.pdf"}
         = image_tag "site-will-be-opened.png"
 
       %nav#menu
         %li.menu_education
-          / Education
+          %a{:href => education_path}
         %li.menu_research
-          / Research
+          %a{:href => research_path}
         %li.menu_entrepreneurship
-          / Enterpreneurship
+          %a{:href => entrepreneurship_path}
+        %li.menu_projects
+          %a{:href => projects_path, :style => "visibility: visible;"}
+            Projects
 
-    = yield
+      %a{:href => contact_path, :id => "contact-link"}
+
+    %section#main-content
+      = yield

@@ -20,12 +20,14 @@ section, article, aside, header, footer, nav, dialog, figure {
   display: block; }
 
 body {
-  background: url(/images/bg-4.jpg) center; }
+  background: url(/images/bg-4.jpg) fixed center center;
+  font-family: helvetica; }
 
-#main {
+header {
   width: 100%;
   height: 117px;
-  background: url(/images/bg-header.png) repeat-x; }
+  background: url(/images/bg-header.png) repeat-x;
+  margin-bottom: 5.2em; }
 
 #header_logo {
   float: left; }
@@ -37,7 +39,8 @@ body {
   float: left;
   position: relative;
   top: 10px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-right: 2em; }
   #site-be-opened :after {
     clear: both; }
 
@@ -50,24 +53,135 @@ body {
   float: left;
   margin: 0 5px;
   height: 35px;
-  width: 123px; }
+  width: 123px;
+  cursor: pointer; }
   #menu > li.menu_education {
     background: url(/images/sprite.png) no-repeat;
-    background-position: 0 -244px; }
+    background-position: 0 -280px; }
   #menu > li.menu_research {
     background: url(/images/sprite.png) no-repeat;
-    background-position: -124px -244px; }
+    background-position: -124px -280px; }
   #menu > li.menu_entrepreneurship {
     width: 182px;
     background: url(/images/sprite.png) no-repeat;
-    background-position: -250px -244px; }
+    background-position: -250px -280px; }
+  #menu > li > a {
+    visibility: hidden; }
 
-.rounded {
-  width: 250px;
+#contact-link {
+  display: block;
+  float: right;
+  width: 88px;
+  height: 18px;
+  background: url(/images/sprite.png) no-repeat -449px -41px;
+  margin-right: .3em; }
+
+#main-content {
+  width: 60em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.box {
+  width: 100%;
   color: white;
   background-color: #FF8500;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  padding: 1em 0em;
+  filter: alpha(opacity=85);
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  opacity: 0.85; }
+  .box > section {
+    margin: 0em 1em; }
+  .box > section > hgroup * {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 0.5em; }
+    .box > section > hgroup * a {
+      text-decoration: inherit;
+      color: inherit; }
+  .box ul {
+    list-style-type: none; }
+
+#left-column {
+  margin-top: -6px;
   float: left;
-  padding: 1em; }
+  width: 35em;
+  margin-left: 1em; }
+
+#right-column {
+  margin-top: -6px;
+  float: right;
+  width: 20em;
+  margin-right: 1em; }
+
+#magazine-list {
+  list-style-type: none; }
+  #magazine-list > li {
+    width: auto;
+    padding-right: 27px;
+    height: 40px;
+    background: url(/images/magazine-cover-1.png) no-repeat top right;
+    vertical-align: middle;
+    display: table; }
+    #magazine-list > li > a {
+      font-size: 27px;
+      text-decoration: none;
+      color: white;
+      display: table-cell;
+      vertical-align: middle; }
+
+article.intro > section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  text-align: justify; }
+
+.dropcap {
+  float: left;
+  width: .9em;
+  font-size: 4em;
+  line-height: 83%;
+  text-align: center; }
+
+.emphasis {
+  font-weight: bolder; }
+
+#entrepreneurship_past-projects-box {
+  list-style-type: none; }
+
+.multi-column {
+  float: left;
+  width: 260px;
+  margin: -5px 1em 0 1em; }
+
+.clear {
+  clear: both; }
+
+#projects_detail-box {
+  width: auto;
+  margin: 1em;
+  display: none; }
+
+.main_aspects {
+  color: white;
+  font-size: 3.5em;
+  display: block;
+  float: left;
+  line-height: 2em; }
+
+#main_res-link {
+  float: right; }
+
+#main_ent-link {
+  width: 100%;
+  text-align: center; }
+
+#aspects-box:after {
+  clear: both;
+  display: block;
+  height: 0;
+  content: ".";
+  visibility: hidden; }

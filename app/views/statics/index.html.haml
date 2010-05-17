@@ -1,7 +1,43 @@
-- box do
-    spdjofjspgdj
-    ådskåpdskåpåkdsåkdsåk
-    sdåkådfskpådfk
-    åkdsåpkdsåpdfså
-    åskfåpksådkådfskdfskå
-    åskdfsåkådspkås
+%section#left-column
+  - box(:id => "aspects-box") do
+    %a{ :href => education_path, :class => "main_aspects", :id => "main_edu-link"} Education
+    %a{ :href => research_path, :class => "main_aspects", :id => "main_res-link"} Research
+    %a{ :href => entrepreneurship_path, :class => "main_aspects", :id => "main_ent-link"} Entrepreneurship
+
+
+    /
+      = image_tag "main-3aspects.png", :usemap => "#aspects-map"
+      %map{:name => "aspects-map", :id => "aspects-map"}
+        %area{:shape => "rect", :coords => "0,0,260,244", :href => education_path, :title => "Education" }
+        %area{:shape => "rect", :coords => "260,0,549,244", :href => research_path, :title => "Research"}
+        %area{:shape => "rect", :coords => "0,260,549,461", :href => entrepreneurship_path, :title => "Entrepreneurship"}
+
+%section#right-column
+  - box do
+    %hgroup
+      %h3 Ongoing project
+    
+    %br
+    %a{:href => "#"}
+      See old projects
+
+  %br
+
+  - box do
+    %hgroup
+      %h3 Next project
+    
+    %br
+    %a{:href => "#"}
+      Read more
+
+  %br
+
+  - box do
+    %hgroup
+      %h3 Magazine
+
+    %ul#magazine-list
+      %li
+        %a{:href => "/pdf/magazin1.pdf"}
+          Vol. 1
