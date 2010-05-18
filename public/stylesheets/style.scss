@@ -26,6 +26,12 @@ body {
   font-family: helvetica;
 }
 
+a {
+  color: #ff8500;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
 header {
   width: 100%;
   height: 117px;
@@ -104,8 +110,8 @@ header {
 
 .box {
   width: 100%;
-  color: white;
-  background-color: #FF8500;
+  color: #383838;
+  background-color: white;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -119,14 +125,22 @@ header {
     margin: 0em 1em;
   }
 
-  & > section > hgroup * {
-    text-decoration: underline;
+  & > section > hgroup {
     text-align: center;
     margin-bottom: 0.5em;
+    color: black;
 
     & a {
       text-decoration: inherit;
       color: inherit;
+    }
+
+    & > h2 {
+      font-size: 1.5em;
+    }
+
+    & > h3 {
+      font-size: 1.0em;
     }
   }
 
@@ -213,8 +227,7 @@ article.intro > section {
 }
 
 .main_aspects {
-  color: white;
-  font-size: 3.5em;
+  font-size: 3em;
   display: block;
   float: left; 
   line-height: 2em;
