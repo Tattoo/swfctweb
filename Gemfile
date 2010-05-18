@@ -1,9 +1,9 @@
 require 'rubygems'
-require 'mongo'
 
 
 source 'http://rubygems.org'
 
+gem 'mongo'
 gem 'rails', '3.0.0.beta3'
 gem 'haml', '3.0.0.rc.5'
 gem 'mongoid', "2.0.0.beta6"
