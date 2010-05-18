@@ -135,6 +135,10 @@ header {
       color: inherit;
     }
 
+    & > h1 {
+      font-size: 2em;
+    }
+
     & > h2 {
       font-size: 1.5em;
     }
@@ -250,4 +254,12 @@ article.intro > section {
   height: 0;
   content: ".";
   visibility: hidden;
+}
+
+article.project-desc > section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  text-align: justify;
+ 
 }

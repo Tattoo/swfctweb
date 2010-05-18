@@ -107,6 +107,8 @@ header {
     .box > section > hgroup a {
       text-decoration: inherit;
       color: inherit; }
+    .box > section > hgroup > h1 {
+      font-size: 2em; }
     .box > section > hgroup > h2 {
       font-size: 1.5em; }
     .box > section > hgroup > h3 {
@@ -194,3 +196,9 @@ article.intro > section {
   height: 0;
   content: ".";
   visibility: hidden; }
+
+article.project-desc > section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  text-align: justify; }

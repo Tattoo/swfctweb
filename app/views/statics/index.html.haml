@@ -14,13 +14,6 @@
       Got a business? You’re in luck
 
 
-    /
-      = image_tag "main-3aspects.png", :usemap => "#aspects-map"
-      %map{:name => "aspects-map", :id => "aspects-map"}
-        %area{:shape => "rect", :coords => "0,0,260,244", :href => education_path, :title => "Education" }
-        %area{:shape => "rect", :coords => "260,0,549,244", :href => research_path, :title => "Research"}
-        %area{:shape => "rect", :coords => "0,260,549,461", :href => entrepreneurship_path, :title => "Entrepreneurship"}
-
 %section#right-column
   - box do
     %hgroup
@@ -42,9 +35,11 @@
   - box do
     %hgroup
       %h3 Ongoing project
+    %a{:href => projects_planesweep_path} Planesweep
     
     %br
-    %a{:href => "#"}
+    %br
+    %a{:href => projects_path}
       See old projects
 
   %br

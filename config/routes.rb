@@ -1,10 +1,16 @@
 Swfctweb::Application.routes.draw do |map|
+  get "projects/gnobles"
+
+  get "projects/yfactor"
+
+  get "projects/planesweep"
+
 
   root :to => "statics#index" 
   match 'education' => "statics#education"
   match 'research' => "statics#research"
   match 'entrepreneurship' => "statics#entrepreneurship"
-  match 'projects' => "statics#projects"
+  match 'projects' => "projects#index"
   match 'contact' => "statics#contact"
   match 'sneak_peek' => "statics#sneak_peek"
 
