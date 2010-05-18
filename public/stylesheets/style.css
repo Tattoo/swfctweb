@@ -130,15 +130,14 @@ header {
   list-style-type: none; }
   #magazine-list > li {
     width: auto;
-    padding-right: 27px;
-    height: 40px;
+    padding-right: 50px;
+    height: 70px;
     background: url(/images/magazine-cover-1.png) no-repeat top right;
     vertical-align: middle;
     display: table; }
     #magazine-list > li > a {
       font-size: 27px;
       text-decoration: none;
-      color: white;
       display: table-cell;
       vertical-align: middle; }
 
@@ -175,10 +174,12 @@ article.intro > section {
   display: none; }
 
 .main_aspects {
-  font-size: 3em;
-  display: block;
   float: left;
-  line-height: 2em; }
+  text-align: center;
+  margin-bottom: 1em; }
+  .main_aspects > a {
+    font-size: 3em;
+    margin-bottom: 0; }
 
 #main_res-link {
   float: right; }

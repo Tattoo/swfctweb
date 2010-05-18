@@ -1,8 +1,17 @@
 %section#left-column
   - box(:id => "aspects-box") do
-    %a{ :href => education_path, :class => "main_aspects", :id => "main_edu-link"} Education
-    %a{ :href => research_path, :class => "main_aspects", :id => "main_res-link"} Research
-    %a{ :href => entrepreneurship_path, :class => "main_aspects", :id => "main_ent-link"} Entrepreneurship
+    %section#main_edu-link.main_aspects
+      %a{ :href => education_path} Education
+      %br 
+      The real smell of education
+    %section#main_res-link.main_aspects
+      %a{ :href => research_path} Research
+      %br
+      Have research your way
+    %section#main_ent-link.main_aspects
+      %a{ :href => entrepreneurship_path} Entrepreneurship
+      %br
+      Got a business? You’re in luck
 
 
     /
@@ -15,21 +24,8 @@
 %section#right-column
   - box do
     %hgroup
-      %h3 Ongoing project
-    
-    %br
-    %a{:href => "#"}
-      See old projects
-
-  %br
-
-  - box do
-    %hgroup
-      %h3 Next project
-    
-    %br
-    %a{:href => "#"}
-      Read more
+      %h3 What's going on?
+    %a{:href => sneak_peek_path} Take a sneak peek inside!
 
   %br
 
@@ -41,3 +37,26 @@
       %li
         %a{:href => "/pdf/magazin1.pdf"}
           Vol. 1
+  %br
+
+  - box do
+    %hgroup
+      %h3 Ongoing project
+    
+    %br
+    %a{:href => "#"}
+      See old projects
+
+  %br
+  /
+    - box do
+      %hgroup
+        %h3 Next project
+      
+      %br
+      %a{:href => "#"}
+        Read more
+
+  %br
+
+
