@@ -3,3 +3,11 @@ development:
   adapter: mongo_mapper
   host: localhost
   database: swfctweb_dev
+
+test:
+  adapter: mongo_mapper
+  host: localhost
+  database: swfctweb_test
+
+cucumber:
+  <<: *test

@@ -7,7 +7,18 @@ gem 'rails', '3.0.0.beta3'
 gem 'mongo_mapper'
 gem 'haml', '3.0.0.rc.5'
 
+gem 'database_cleaner'
 
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails', '>= 2.0.0.beta'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'ZenTest'
+  gem 'autotest'
+  gem 'autotest-rails'
+  gem 'launchy'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
