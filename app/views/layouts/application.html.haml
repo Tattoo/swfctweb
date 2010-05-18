@@ -12,24 +12,25 @@
     = stylesheet_link_tag "style"
   %body
     %header
-      %a#header_logo{:href => root_path}
-        = image_tag "logo.png"
+      %section
+        %a#header_logo{:href => root_path}
+          = image_tag "logo.png"
 
-      %a#site-be-opened{:href => "/pdf/magazin1.pdf"}
-        = image_tag "site-will-be-opened.png"
+        %a#site-be-opened{:href => "/pdf/magazin1.pdf"}
+          = image_tag "site-will-be-opened.png"
 
-      %nav#menu
-        %li.menu_education
-          %a{:href => education_path}
-        %li.menu_research
-          %a{:href => research_path}
-        %li.menu_entrepreneurship
-          %a{:href => entrepreneurship_path}
-        %li.menu_projects
-          %a{:href => projects_path, :style => "visibility: visible;"}
-            Projects
+        %nav#menu
+          %li.menu_education
+            %a{:href => education_path}
+          %li.menu_research
+            %a{:href => research_path}
+          %li.menu_entrepreneurship
+            %a{:href => entrepreneurship_path}
+          %li.menu_projects
+            %a{:href => projects_path, :style => "visibility: visible;"}
+              Projects
 
-      %a{:href => contact_path, :id => "contact-link"}
+        %a{:href => contact_path, :id => "contact-link"}
 
     %section#main-content
       = yield

@@ -18,4 +18,8 @@ class StaticsController < ApplicationController
   def contact
   end
 
+  def post_contact
+    redirect_to contact_path
+  end
+
 end

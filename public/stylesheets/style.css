@@ -33,6 +33,10 @@ header {
   height: 117px;
   background: url(/images/bg-header.png) repeat-x;
   margin-bottom: 5.2em; }
+  header > section {
+    width: 60em;
+    margin-left: auto;
+    margin-right: auto; }
 
 #header_logo {
   float: left; }
@@ -203,3 +207,26 @@ article.project-desc > section {
   margin-bottom: 1em;
   line-height: 1.3em;
   text-align: justify; }
+
+#magazines-box {
+  margin-top: -5px; }
+  #magazines-box > section > img {
+    margin: 0 1em 1em 0; }
+
+#contact-box {
+  overflow: hidden; }
+  #contact-box > section > form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em; }
+    #contact-box > section > form > label {
+      width: 7em;
+      text-align: right;
+      float: left; }
+    #contact-box > section > form > input, #contact-box > section > form > textarea {
+      width: 15em;
+      margin-left: 1em;
+      float: left; }
+    #contact-box > section > form > input[type="submit"] {
+      width: 6em;
+      margin-left: 9.5em; }

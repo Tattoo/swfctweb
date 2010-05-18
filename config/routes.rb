@@ -9,9 +9,10 @@ Swfctweb::Application.routes.draw do |map|
   match 'research' => "statics#research"
   match 'entrepreneurship' => "statics#entrepreneurship"
   match 'projects' => "projects#index"
-  match 'contact' => "statics#contact"
+  get 'contact' => "statics#contact"
+  post 'contact' => "statics#post_contact"
   match 'sneak_peek' => "statics#sneak_peek"
-  
+  match 'magazines' => "statics#magazines" 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

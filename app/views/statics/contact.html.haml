@@ -1,0 +1,13 @@
+- box(:id => "contact-box") do
+  %hgroup
+    %h1 Have something on your mind?
+  - form_tag do
+    = label_tag :email
+    = text_field_tag :email
+    %br
+    = label_tag :message
+    = text_area_tag :message
+    %br.clear
+    = submit_tag "Tell us"
+  
+

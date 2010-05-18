@@ -37,6 +37,12 @@ header {
   height: 117px;
   background: url(/images/bg-header.png) repeat-x;
   margin-bottom: 5.2em;
+
+  & > section {
+    width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #header_logo {
@@ -62,6 +68,7 @@ header {
   display: inline-block;
   list-style-type: none;
   float: left;
+
 }
 
 #menu > li {
@@ -263,4 +270,40 @@ article.project-desc > section {
   line-height: 1.3em;
   text-align: justify;
  
+}
+
+#magazines-box {
+  margin-top: -5px;
+
+  & > section > img {
+    margin: 0 1em 1em 0;
+  }
+
+}
+
+#contact-box {
+  overflow: hidden;
+
+  & > section > form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+
+    & > label {
+      width: 7em;
+      text-align: right;
+      float: left;
+    }
+
+    & > input, & > textarea {
+      width: 15em;
+      margin-left: 1em;
+      float: left;
+    }
+
+    & > input[type="submit"] {
+      width: 6em;
+      margin-left: 9.5em;
+    }
+  }
 }
