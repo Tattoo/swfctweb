@@ -1,13 +1,14 @@
 require 'rubygems'
 require 'mongo'
 
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
-gem 'mongo_mapper'
 gem 'haml', '3.0.0.rc.5'
+gem 'mongoid', "2.0.0.beta6"
 
-gem 'database_cleaner'
+#gem 'database_cleaner'
 
 group :test do
   gem 'rspec'
@@ -18,6 +19,7 @@ group :test do
   gem 'autotest'
   gem 'autotest-rails'
   gem 'launchy'
+  gem 'webrat'
 end
 
 # Bundle edge Rails instead:

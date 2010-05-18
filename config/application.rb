@@ -2,10 +2,12 @@ require File.expand_path('../boot', __FILE__)
 
 #require 'rails/all'
 
+
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "rails/test_unit/railtie"
+require 'mongoid/railtie'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -37,10 +39,10 @@ module Swfctweb
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
-       g.orm             :mongomapper
-    #   g.template_engine :erb
-    #   g.test_framework  :test_unit, :fixture => true
-     end
+       g.orm             :mongoid
+       g.template_engine :haml
+       g.test_framework  :rspec
+    end
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
