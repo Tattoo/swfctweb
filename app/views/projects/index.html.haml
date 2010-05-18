@@ -1,0 +1,45 @@
+%div{:style => "width: 55em; margin-left: auto; margin-right: auto"}
+  - box(:cssClasses => "multi-column") do
+    %hgroup
+      %h2 Next in the pipeline
+
+    / %a{:href => "#", :class => "project"}>
+    ??,  Sept - Oct 2010
+    
+    %br
+    %br
+
+    %a{:href => "http://ilmo.cs.helsinki.fi", :id => "projects_register-link", :target => "_blank"}
+      Register!
+
+  - box(:cssClasses => "multi-column") do
+    %hgroup
+      %h2 Right now
+    %a{:href => projects_planesweep_path, :class => "project"}>Planesweep
+    , May - Jul 2010
+    
+
+  - box(:cssClasses => "multi-column") do 
+    %hgroup
+      %h2 Past 
+    %ul
+      %li
+        %a{:href => projects_yfactor_path, :class => "project"}>Y-factor
+        , Mar - May 2010
+      %li
+        %a{:href => projects_gnobles_path, :class => "project"}>Gnobles
+        , Jan - Mar 2010
+/
+  %br.clear
+
+  - box(:id => "projects_detail-box") do
+    DOUBLE SUN POWEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRR
+
+ 
+  :javascript
+    $(document).ready(function(){
+      $("section a:not(#projects_register-link)").click(function(event){
+        event.preventDefault();
+        $("#projects_detail-box").slideDown();
+      });
+    });

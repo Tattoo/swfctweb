@@ -1,8 +1,6 @@
 Swfctweb::Application.routes.draw do |map|
   get "projects/gnobles"
-
   get "projects/yfactor"
-
   get "projects/planesweep"
 
 
@@ -13,6 +11,7 @@ Swfctweb::Application.routes.draw do |map|
   match 'projects' => "projects#index"
   match 'contact' => "statics#contact"
   match 'sneak_peek' => "statics#sneak_peek"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

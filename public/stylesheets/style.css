@@ -110,7 +110,8 @@ header {
     .box > section > hgroup > h1 {
       font-size: 2em; }
     .box > section > hgroup > h2 {
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      margin-bottom: 1em; }
     .box > section > hgroup > h3 {
       font-size: 1.0em; }
   .box ul {
