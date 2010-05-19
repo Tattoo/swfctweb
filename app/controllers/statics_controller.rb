@@ -19,6 +19,7 @@ class StaticsController < ApplicationController
   end
 
   def post_contact
+    raise params.inspect
     redirect_to contact_path
   end
 

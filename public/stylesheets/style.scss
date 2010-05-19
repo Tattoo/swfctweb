@@ -144,6 +144,7 @@ header {
 
     & > h1 {
       font-size: 2em;
+      margin-bottom: 1.5em;
     }
 
     & > h2 {
@@ -153,6 +154,7 @@ header {
 
     & > h3 {
       font-size: 1.0em;
+      margin-bottom: 0.5em;
     }
   }
 
@@ -243,11 +245,17 @@ article.intro > section {
   margin-bottom: 1em;
   & > a {
     font-size: 3em;
-    margin-bottom: 0;
   }
+
+  
+}
+
+#main_edu-link {
+  margin-top: 2em;
 }
 
 #main_res-link {
+  margin-top: 2em;
   float: right;
 }
 
@@ -256,12 +264,26 @@ article.intro > section {
   text-align: center;
 }
 
-#aspects-box:after {
-  clear: both;
-  display: block;
-  height: 0;
-  content: ".";
-  visibility: hidden;
+#aspects-box {
+
+  & > section > hgroup {
+    & > h1 {
+      margin-bottom: 0em;
+    }
+  }
+
+  &:after {
+    clear: both;
+    display: block;
+    height: 0;
+    content: ".";
+    visibility: hidden;
+  }
+}
+
+.main_slogan {
+  margin-top: -11px;
+  font-style: italic;
 }
 
 article.project-desc > section {
@@ -269,14 +291,30 @@ article.project-desc > section {
   margin-bottom: 1em;
   line-height: 1.3em;
   text-align: justify;
+
+  & > img {
+    margin: 0 0 1em 1em;
+  }
  
 }
 
 #magazines-box {
   margin-top: -5px;
+  min-height: 50em;
 
-  & > section > img {
+  & > section > a > img {
     margin: 0 1em 1em 0;
+  }
+
+  & > section > article > ul {
+    list-style-type: disc;
+    float: right;
+
+    & > li {
+      margin-top: 0.5em;
+      font-size: 0.8em;
+      width: 32em;
+    }
   }
 
 }
@@ -287,7 +325,7 @@ article.project-desc > section {
   & > section > form {
     margin-left: auto;
     margin-right: auto;
-    width: 25em;
+    width: 35em;
 
     & > label {
       width: 7em;
@@ -296,9 +334,15 @@ article.project-desc > section {
     }
 
     & > input, & > textarea {
-      width: 15em;
+      width: 27em;
       margin-left: 1em;
       float: left;
+      margin-bottom: 1em;
+    }
+
+    & > textarea {
+      width: 30em;
+      height: 10em;
     }
 
     & > input[type="submit"] {
@@ -306,4 +350,26 @@ article.project-desc > section {
       margin-left: 9.5em;
     }
   }
+}
+
+#education_bubble {
+  position: relative;
+  top: 0;
+  left: 15em;
+}
+
+#education_research {
+  position: relative;
+}
+
+#entrepreneurship_bubble {
+  position: relative;
+  left: 35em;
+  top: -3.5em;
+}
+
+#contact-info {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
 }

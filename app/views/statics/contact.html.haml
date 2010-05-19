@@ -1,10 +1,45 @@
 - box(:id => "contact-box") do
   %hgroup
     %h1 Have something on your mind?
+
+  %section#contact-info
+    Contact us
+    %br
+    %br
+    %u Email
+    %br
+    %a{:mailto => "Fabian.Fagerholm@cs.helsinki.fi"}> Fabian Fagerholm
+    , Factory Lead
+    %br
+    %a{:mailto => "Pekka.Abrahamsson@cs.helsinki.fi"}> Pekka Abrahamsson
+    , Factorys Father
+    %br
+    %br
+    %u Phone
+    %br
+    Fabian Fagerholm: (09) 19151319
+    %br
+    Pekka Abrahamsson: (09) 19151312
+    %br
+    %br
+    %u Address
+    %br
+    Software Factory,
+    %br
+    Tietojenkäsittelytieteen laitos
+    %br
+    PL 68 (Gustaf Hällströmin katu 2b)
+    %br
+    00014 HELSINGIN YLIOPISTO
+    %br
+    %br
+    %u Or leave a message
+
+
   - form_tag do
     = label_tag :email
     = text_field_tag :email
-    %br
+    %br.clear
     = label_tag :message
     = text_area_tag :message
     %br.clear
