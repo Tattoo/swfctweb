@@ -23,7 +23,7 @@ class StaticsController < ApplicationController
     email = params[:email]
     message = params[:message]
     begin
-      f = File.open("/home/tattoo/messages.txt", "a")
+      f = File.open("/home/tkairi/messages.txt", "a")
       f.puts(email)
       f.puts(Time.now)
       f.puts("\n")
