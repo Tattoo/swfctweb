@@ -1,0 +1,297 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* reset for html5-specific elements */
+section, article, aside, header, footer, nav, dialog, figure {
+  display: block; }
+
+body {
+  background: url(/images/bg-4.jpg) fixed center center;
+  font-family: helvetica; }
+
+a {
+  color: #ff8500;
+  font-weight: bolder;
+  text-decoration: none; }
+
+header {
+  width: 100%;
+  height: 117px;
+  background: url(/images/bg-header.png) repeat-x;
+  margin-bottom: 5.2em; }
+  header > section {
+    width: 60em;
+    margin-left: auto;
+    margin-right: auto; }
+
+#header_logo {
+  float: left; }
+
+#site-be-opened {
+  display: block;
+  height: 53px;
+  width: 455px;
+  float: left;
+  position: relative;
+  top: 10px;
+  margin-bottom: 20px;
+  margin-right: 2em; }
+  #site-be-opened :after {
+    clear: both; }
+
+#menu {
+  display: inline-block;
+  list-style-type: none;
+  float: left;
+  margin-top: 2em; }
+
+#menu > li {
+  float: left;
+  margin: 0 5px;
+  height: 35px;
+  width: 123px;
+  cursor: pointer; }
+  #menu > li.menu_education {
+    background: url(/images/sprite.png) no-repeat;
+    background-position: 0 -280px; }
+  #menu > li.menu_research {
+    background: url(/images/sprite.png) no-repeat;
+    background-position: -124px -280px; }
+  #menu > li.menu_entrepreneurship {
+    width: 182px;
+    background: url(/images/sprite.png) no-repeat;
+    background-position: -250px -280px; }
+  #menu > li > a {
+    visibility: hidden; }
+
+#contact-link {
+  display: block;
+  float: right;
+  width: 88px;
+  height: 18px;
+  background: url(/images/sprite.png) no-repeat -449px -41px;
+  margin-right: .3em; }
+
+#main-content {
+  width: 60em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.box {
+  width: 100%;
+  color: #383838;
+  background-color: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 1em 0em;
+  filter: alpha(opacity=85);
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  opacity: 0.85; }
+  .box > section {
+    margin: 0em 1em; }
+  .box > section > hgroup {
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: black; }
+    .box > section > hgroup a {
+      text-decoration: inherit;
+      color: inherit; }
+    .box > section > hgroup > h1 {
+      font-size: 2em;
+      margin-bottom: 1.5em; }
+    .box > section > hgroup > h2 {
+      font-size: 1.5em;
+      margin-bottom: 1em; }
+    .box > section > hgroup > h3 {
+      font-size: 1.0em;
+      margin-bottom: 0.5em; }
+  .box ul {
+    list-style-type: none; }
+
+#left-column {
+  margin-top: -6px;
+  float: left;
+  width: 35em;
+  margin-left: 1em; }
+
+#right-column {
+  margin-top: -6px;
+  float: right;
+  width: 20em;
+  margin-right: 1em; }
+
+#magazine-list {
+  list-style-type: none; }
+  #magazine-list > li {
+    width: auto;
+    padding-right: 50px;
+    height: 70px;
+    background: url(/images/magazine-cover-1.png) no-repeat top right;
+    vertical-align: middle;
+    display: table; }
+    #magazine-list > li > a {
+      font-size: 27px;
+      text-decoration: none;
+      display: table-cell;
+      vertical-align: middle; }
+
+article.intro > section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  text-align: justify; }
+
+.dropcap {
+  float: left;
+  width: .9em;
+  font-size: 4em;
+  line-height: 83%;
+  text-align: center; }
+
+.emphasis {
+  font-weight: bolder; }
+
+#entrepreneurship_past-projects-box {
+  list-style-type: none; }
+
+.multi-column {
+  float: left;
+  width: 260px;
+  margin: -5px 1em 0 1em; }
+
+.clear {
+  clear: both; }
+
+#projects_detail-box {
+  width: auto;
+  margin: 1em;
+  display: none; }
+
+.main_aspects {
+  float: left;
+  text-align: center;
+  margin-bottom: 1em; }
+  .main_aspects > a {
+    font-size: 3em; }
+
+#main_edu-link {
+  margin-top: 2em; }
+
+#main_res-link {
+  margin-top: 2em;
+  float: right; }
+
+#main_ent-link {
+  width: 100%;
+  text-align: center; }
+
+#aspects-box > section > hgroup > h1 {
+  margin-bottom: 0em; }
+#aspects-box:after {
+  clear: both;
+  display: block;
+  height: 0;
+  content: ".";
+  visibility: hidden; }
+
+.main_slogan {
+  margin-top: -11px;
+  font-style: italic; }
+
+article.project-desc > section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  text-align: justify; }
+  article.project-desc > section > img {
+    margin: 0 0 1em 1em; }
+
+#magazines-box {
+  margin-top: -5px;
+  min-height: 50em; }
+  #magazines-box > section > a > img {
+    margin: 0 1em 1em 0; }
+  #magazines-box > section > article > ul {
+    list-style-type: disc;
+    float: right; }
+    #magazines-box > section > article > ul > li {
+      margin-top: 0.5em;
+      font-size: 0.8em;
+      width: 32em; }
+
+#contact-box {
+  overflow: hidden; }
+  #contact-box > section > form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35em; }
+    #contact-box > section > form > label {
+      width: 7em;
+      text-align: right;
+      float: left; }
+    #contact-box > section > form > input, #contact-box > section > form > textarea {
+      width: 27em;
+      margin-left: 1em;
+      float: left;
+      margin-bottom: 1em; }
+    #contact-box > section > form > textarea {
+      width: 30em;
+      height: 10em; }
+    #contact-box > section > form > input[type="submit"] {
+      width: 6em;
+      margin-left: 9.5em; }
+
+#education_bubble {
+  position: relative;
+  top: 0;
+  left: 15em; }
+
+#education_research {
+  position: relative; }
+
+#entrepreneurship_bubble {
+  position: relative;
+  left: 35em;
+  top: -3.5em; }
+
+#contact_info {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+  text-align: center; }
+
+#contact_people {
+  width: 35.2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  text-align: left; }
+
+.contact_person {
+  width: 22em;
+  height: 58px;
+  float: left;
+  font-size: 0.8em;
+  margin-bottom: 1em; }
+  .contact_person > img {
+    margin-right: 0.3em;
+    float: left; }
+
+.contact_person-name {
+  font-size: 1.2em; }

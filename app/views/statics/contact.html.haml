@@ -1,0 +1,69 @@
+- box(:id => "contact-box") do
+  %hgroup
+    %h1 Have something on your mind?
+
+  %section#contact_info
+
+    %section#contact_people
+      %section.contact_person
+        = image_tag "contact/fabian.png"
+        %span.contact_person-name Fabian Fagerholm,
+        %br
+        %a{:mailto => "Fabian.Fagerholm@cs.helsinki.fi"}>  Fabian.Fagerholm@cs.helsinki.fi
+        ,
+        %br
+        (09) 19151319
+
+      %section.contact_person
+        = image_tag "contact/pekka.png"
+        %span.contact_person-name Pekka Abrahamsson,
+        %br
+        %a{:mailto => "Pekka.Abrahamsson@cs.helsinki.fi"}>  Pekka.Abrahamsson@cs.helsinki.fi
+        ,
+        %br
+        (09) 19151312
+      
+      %br.clear
+
+      %section.contact_person
+        = image_tag "contact/matti.png"
+        %span.contact_person-name Matti Paksula,
+        %br
+        %a{:mailto => "matti.paksula@cs.helsinki.fi" }> matti.paksula@cs.helsinki.fi
+        
+
+      %section.contact_person
+        = image_tag "contact/tatu.png"
+        %span.contact_person-name Tatu Kairi,
+        %br
+        %a{:mailto => "tatu.kairi@cs.helsinki.fi"}> tatu.kairi@cs.helsinki.fi
+        
+
+      %br.clear
+
+    %section#contact_address
+      %u Address
+      %br
+      Software Factory,
+      %br
+      Department of Computer Science,
+      %br
+      PL 68 (Gustaf Hällströmin katu 2b),
+      %br
+      00014 HELSINGIN YLIOPISTO
+
+      %br
+      %br
+      %u Or leave a message
+
+
+  - form_tag do
+    = label_tag :email
+    = text_field_tag :email
+    %br.clear
+    = label_tag :message
+    = text_area_tag :message
+    %br.clear
+    = submit_tag "Tell us"
+  
+
