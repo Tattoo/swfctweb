@@ -56,8 +56,15 @@
       %br
       %u Or leave a message
 
+  - if flash[:notice]
+    %section.notice
+      = flash[:notice]
 
-  - form_tag do
+  - if flash[:error]
+    %section.error
+      = flash[:error] 
+
+  = form_tag do
     = label_tag :email
     = text_field_tag :email
     %br.clear
