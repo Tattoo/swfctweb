@@ -56,7 +56,8 @@ header {
 #menu {
   display: inline-block;
   list-style-type: none;
-  float: left; }
+  float: left;
+  margin-top: 2em; }
 
 #menu > li {
   float: left;
