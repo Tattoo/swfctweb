@@ -400,3 +400,19 @@ article.project-desc > section {
 .contact_person-name {
   font-size: 1.2em;
 }
+
+.error {
+  font-weight: bold;
+  color: red;
+  width: 20em;
+  margin: 1em auto 1em auto;
+  text-align: center;
+}
+
+.notice {
+  font-weight: bold;
+  color: green;
+  width: 20em;
+  margin: 1em auto 1em auto;
+  text-align: center;
+}
