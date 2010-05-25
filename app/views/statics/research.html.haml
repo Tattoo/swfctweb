@@ -15,7 +15,12 @@
 
       %section
         %span.emphasis Research 
-        in Software Factory is lead by prof. Pekka Abrahamsson from the Department of Computer Science in University of Helsinki.  
+        in Software Factory is lead by 
+        %br
+        %section{:class => "intro_person-left", :style => "width: 20em;"}
+          = image_tag "contact/pekka.png", :align => "left"
+          %a{:mailto => "pekka.abrahamsson@cs.helsinki.fi"} prof. Pekka Abrahamsson 
+          from the Department of Computer Science in University of Helsinki.  
 
   = image_tag "bubble-research.png", :id => "research_bubble"
 

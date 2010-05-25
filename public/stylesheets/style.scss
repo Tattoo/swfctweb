@@ -203,8 +203,30 @@ article.intro > section {
   margin-bottom: 1em;
   line-height: 1.3em;
   text-align: justify;
+  overflow: auto;
+}
 
-  
+.intro_person-left {
+  float: left;
+  margin-top: 0.4em;
+  width: 16em;
+  text-align: left;
+
+  & > img {
+    margin: 0.2em;
+  } 
+
+}
+
+.intro_person-right {
+  float: right;
+  margin-top: 0.4em;
+  width: 16em;
+  text-align: right;
+
+  & > img {
+    margin: 0.2em;
+  }
 }
 
 .dropcap {
