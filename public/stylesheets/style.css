@@ -41,7 +41,7 @@ header {
 #header_logo {
   float: left; }
 
-#site-be-opened {
+#slogan-image {
   display: block;
   height: 53px;
   width: 455px;
@@ -50,14 +50,13 @@ header {
   top: 10px;
   margin-bottom: 20px;
   margin-right: 2em; }
-  #site-be-opened :after {
+  #slogan-image :after {
     clear: both; }
 
 #menu {
   display: inline-block;
   list-style-type: none;
-  float: left;
-  margin-top: 2em; }
+  float: left; }
 
 #menu > li {
   float: left;

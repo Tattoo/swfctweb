@@ -16,6 +16,8 @@
         %a#header_logo{:href => root_path}
           = image_tag "logo.png"
 
+        = image_tag @slogan_name, :id => "slogan-image"
+
         %nav#menu
           %li.menu_education
             %a{:href => education_path}
