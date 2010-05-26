@@ -14,6 +14,7 @@ Swfctweb::Application.routes.draw do |map|
   post 'contact' => "statics#post_contact"
   match 'sneak_peek' => "statics#sneak_peek"
   match 'magazines' => "statics#magazines" 
+  match "guide" => "statics#guide"
 
 
 

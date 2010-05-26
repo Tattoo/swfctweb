@@ -203,8 +203,30 @@ article.intro > section {
   margin-bottom: 1em;
   line-height: 1.3em;
   text-align: justify;
+  overflow: auto;
+}
 
-  
+.intro_person-left {
+  float: left;
+  margin-top: 0.4em;
+  width: 16em;
+  text-align: left;
+
+  & > img {
+    margin: 0.2em;
+  } 
+
+}
+
+.intro_person-right {
+  float: right;
+  margin-top: 0.4em;
+  width: 16em;
+  text-align: right;
+
+  & > img {
+    margin: 0.2em;
+  }
 }
 
 .dropcap {
@@ -368,10 +390,53 @@ article.project-desc > section {
   top: -3.5em;
 }
 
-#contact-info {
+#contact_info {
   width: 100%;
   text-align: center;
   margin-bottom: 1em;
+  text-align: center;
+}
+
+#contact_people {
+  width: 35.2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  text-align: left;
+
+}
+
+.contact_person {
+  width: 22em;
+  height: 58px;
+  float: left;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+
+  & > img {
+    margin-right: 0.3em;
+    float: left;
+  }
+}
+
+.contact_person-name {
+  font-size: 1.2em;
+}
+
+.error {
+  font-weight: bold;
+  color: red;
+  width: 20em;
+  margin: 1em auto 1em auto;
+  text-align: center;
+}
+
+.notice {
+  font-weight: bold;
+  color: green;
+  width: 20em;
+  margin: 1em auto 1em auto;
+  text-align: center;
 }
 
 #vision-box {

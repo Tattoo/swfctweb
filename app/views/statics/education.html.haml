@@ -2,7 +2,7 @@
 %section#left-column
   - box do 
     %hgroup
-      %h2 The real smell of education
+      %h2 Bringing passion to development
 
     %article.intro
       %section
@@ -15,7 +15,18 @@
 
       %section
         %span.emphasis Education 
-        in Software Factory is lead by Dr. Jaakko Kurhila and Dr. Juha Taina from University of Helsinki.
+        in Software Factory is lead by 
+        %br
+        %section{:class => "intro_person-left"}
+          = image_tag "contact/jaakko.png", :align => "left"
+          %a{:mailto => "jaakko.kurhila@cs.helsinki.fi"}Dr. Jaakko Kurhila
+          from University of Helsinki
+
+        %section{:class => "intro_person-right"}
+          = image_tag "contact/juha.png", :align => "right"
+          %a{:mailto => "juha.taina@cs.helsinki.fi"}Dr. Juha Taina 
+          from University of Helsinki
+
   = image_tag "bubble-education.png", :id => "education_bubble"
 %section#right-column
   - box do 
@@ -35,6 +46,6 @@
 
     Want to know the day-to-day?
     %br
-    %a{:href => "/pdf/SF_guide.pdf"}
+    %a{:href => guide_path}
       Read the Software Factory Guide for teams
 
