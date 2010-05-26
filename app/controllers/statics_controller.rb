@@ -23,4 +23,7 @@ class StaticsController < ApplicationController
     redirect_to contact_path
   end
 
+
+  def vision
+  end
 end
