@@ -22,7 +22,13 @@
       %section.main_slogan
         Got a business? You’re in luck
 
+  %br
 
+  - box(:id => "main_vision-box") do
+    %a{:href => vision_path}
+      = image_tag "vision-small.png"
+    What on Earth are these guys planning? See for yourself!
+    
 %section#right-column
   - box do
     %hgroup

@@ -280,5 +280,10 @@ article.project-desc > section {
 
 #vision-pic {
   display: block;
-  width: 900px;
   margin: 0 auto 0 auto; }
+
+#main_vision-box {
+  text-align: center; }
+  #main_vision-box > img {
+    display: block;
+    margin: 0 auto 1em auto; }
