@@ -1,6 +1,6 @@
 - box(:id => "contact-box") do
   %hgroup
-    %h1 Have something on your mind?
+    %h1 Software Factory Team
 
   %section#contact_info
 
@@ -12,7 +12,7 @@
         %a{:mailto => "Fabian.Fagerholm@cs.helsinki.fi"}>  Fabian.Fagerholm@cs.helsinki.fi
         ,
         %br
-        (09) 19151319
+        (09) 191 51319
 
       %section.contact_person
         = image_tag "contact/pekka.png"
@@ -21,8 +21,43 @@
         %a{:mailto => "Pekka.Abrahamsson@cs.helsinki.fi"}>  Pekka.Abrahamsson@cs.helsinki.fi
         ,
         %br
-        (09) 19151312
-      
+        (09) 191 51312
+ 
+      %section.contact_person
+        = image_tag "contact/unknown.png"
+        %span.contact_person-name Petri Kettunen,
+        %br
+        %a{:mailto => "Petri.Kettunen@cs.helsinki.fi"}> Petri.Kettunen@cs.helsinki.fi
+        ,
+        %br
+        (09) 191 51273
+
+      %br.clear
+
+      %section.contact_person
+        = image_tag "contact/jaakko.png"
+        %span.contact_person-name Jaakko Kurhila,
+        %br
+        %a{:mailto => "Jaakko.Kurhila@cs.helsinki.fi"}> Jaakko.Kurhila@cs.helsinki.fi
+        ,
+        %br
+        (09) 191 51386
+
+      %section.contact_person
+        = image_tag "contact/juha.png"
+        %span.contact_person-name Juha Taina,
+        %br
+        %a{:mailto => "Juha.Taina@cs.helsinki.fi"}> Juha.Taina@cs.helsinki.fi
+        ,
+        %br
+        (09) 191 51311
+
+      %section.contact_person
+        = image_tag "contact/jussi.png"
+        %span.contact_person-name Jussi Autere,
+        %br
+        %a{:mailto => "jussi@autere.com"}> jussi@autere.com
+
       %br.clear
 
       %section.contact_person
@@ -30,7 +65,31 @@
         %span.contact_person-name Matti Paksula,
         %br
         %a{:mailto => "matti.paksula@cs.helsinki.fi" }> matti.paksula@cs.helsinki.fi
-        
+
+      %section.contact_person
+        = image_tag "contact/unknown.png"
+        %span.contact_person-name Kari Kähkönen,
+        %br
+        %a{:mailto => "Kari.Kahkonen@cs.helsinki.fi"}> Kari.Kahkonen@cs.helsinki.fi,
+        %br
+        (09) 191 51318
+
+      %section.contact_person
+        = image_tag "contact/henri.png"
+        %span.contact_person-name Henri Karhatsu,
+        %br
+        %a{:mailto => "henri.karhatsu@karhatsu.com"}> henri.karhatsu@karhatsu.com
+
+      %br.clear
+
+      %section.contact_person
+        = image_tag "contact/unknown.png"
+        %span.contact_person-name Vaibhavi Oza,
+        %br
+        %a{:mailto => "Vaibhavi.Oza@cs.helsinki.fi"}> Vaibhavi.Oza@cs.helsinki.fi,
+        %br
+        (09) 191 51630
+
 
       %section.contact_person
         = image_tag "contact/tatu.png"
@@ -54,7 +113,7 @@
 
       %br
       %br
-      %u Or leave a message
+      %u Leave a message
 
   - if flash[:notice]
     %section.notice
