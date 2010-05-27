@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   before_filter :generate_slogan
 
   def generate_slogan
-    @slogan_name = "slogans/slogan" + (1 + rand(10)).to_s + ".png"
+    @slogan_name = "slogans/slogan" + (1 + rand(14)).to_s + ".png"
   end
 end
