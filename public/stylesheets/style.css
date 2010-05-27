@@ -338,3 +338,8 @@ article.project-desc > section {
   #main_vision-box > img {
     display: block;
     margin: 0 auto 1em auto; }
+
+#main_intro-box > section > hgroup h1 {
+  margin-bottom: 0; }
+#main_intro-box > section > hgroup h2 {
+  margin-bottom: 0.5em; }
