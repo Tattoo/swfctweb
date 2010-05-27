@@ -342,7 +342,15 @@ article.project-desc > section {
 }
 
 #contact-box {
-  overflow: hidden;
+  margin-top: -6px;
+
+  &:after {
+    clear: both;
+    display: block;
+    height: 0;
+    content: ".";
+    visibility: hidden;
+  }
 
   & > section > form {
     margin-left: auto;
