@@ -5,3 +5,4 @@ tmp/**/*
 *.swp
 public/stylesheets/.sass-cache
 .sass-cache/
+nbproject
