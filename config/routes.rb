@@ -15,7 +15,7 @@ Swfctweb::Application.routes.draw do |map|
   match 'sneak_peek' => "statics#sneak_peek"
   match 'magazines' => "statics#magazines" 
   match "guide" => "statics#guide"
-
+  match 'launchevent' => "statics#launch_event"
 
 
   # The priority is based upon order of creation:
