@@ -377,3 +377,17 @@ article.project-desc > section {
   margin-right: auto; }
   .opening_bottom > section > ul {
     list-style-type: square; }
+
+.opening-pic {
+  float: left;
+  margin: 0 1em 1em 0;
+  width: 250px; }
+  .opening-pic > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+#opening-pics {
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto; }
