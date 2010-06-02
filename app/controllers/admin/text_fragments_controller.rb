@@ -34,9 +34,4 @@ class Admin::TextFragmentsController < Admin::AdminController
     end
   end
 
-  def destroy
-    TextFragment.find(params[:id]).destroy
-    redirect_to admin_text_fragments_path
-  end
-
 end
