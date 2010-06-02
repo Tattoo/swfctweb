@@ -10,7 +10,8 @@ class Admin::TextFragmentsController < Admin::AdminController
 
   def update
     @text_fragment = TextFragment.find(params[:id])
-    if @text_fragment.update_attributes(params[:text_fragment])
+    @text_fragment.value = params[:text_fragment][:value]
+    if @text_fragment.save
       flash[:notice] = "Saved!"
       redirect_to admin_text_fragments_path
     else
