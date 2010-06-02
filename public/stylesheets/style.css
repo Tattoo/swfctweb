@@ -135,6 +135,11 @@ header {
   width: 20em;
   margin-right: 1em; }
 
+#full-width {
+  width: 60em;
+  margin-right: 1em;
+}
+
 #magazine-list {
   list-style-type: none; }
   #magazine-list > li {
