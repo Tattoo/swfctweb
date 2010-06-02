@@ -16,7 +16,7 @@ module ApplicationHelper
 
   def tf(key)
     tf = TextFragment.find(:first, :conditions => {:key => key})
-    return tf.value if tf
+    return RedCloth.new(tf.value).to_html if tf
     return "Text missing: [#{key}]"
   end
 
