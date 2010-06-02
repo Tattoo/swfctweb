@@ -8,6 +8,7 @@ gem 'rails', '3.0.0.beta3'
 gem 'haml', '3.0.0.rc.5'
 gem 'mongoid', "2.0.0.beta6"
 gem 'RedCloth'
+gem 'bson_ext'
 
 #gem 'database_cleaner'
 
