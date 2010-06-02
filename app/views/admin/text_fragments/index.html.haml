@@ -13,6 +13,6 @@
             %th Text
           - @text_fragments.each do |t|
             %tr
+              %td #{t.key}
               %td
-                =link_to t.key, edit_admin_text_fragment_path(t)
-              %td #{t.value}
+                =link_to truncate(t.value, :length => 100), edit_admin_text_fragment_path(t)
