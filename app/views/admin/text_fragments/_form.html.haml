@@ -1,0 +1,13 @@
+- form_for([:admin, @text_fragment]) do |f|
+  = f.error_messages
+  = f.label :key, "Key:"
+  %br
+  = f.text_field :key
+  %br
+  = f.label :value, "Value:"
+  %br
+  = f.text_area :value
+  %br
+  = f.submit "Save"
+  %br
+  = link_to "Cancel", admin_text_fragments_path

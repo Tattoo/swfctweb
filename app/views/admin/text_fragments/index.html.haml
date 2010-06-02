@@ -1,0 +1,21 @@
+%section#full-width
+  - box(:id => "main_intro-box") do
+    %hgroup
+      %h1 Manage Texts
+
+    %article.intro
+      %section
+        = link_to "New text", new_admin_text_fragment_path
+        %br
+        %table
+          %tr
+            %th Key
+            %th Text
+            %th Delete
+          - @text_fragments.each do |t|
+            %tr
+              %td
+                =link_to t.key, edit_admin_text_fragment_path(t)
+              %td #{t.value}
+              %td
+                =button_to "Delete", admin_text_fragment_path(t), :method => :delete, :confirm => "Are you sure want to delete this text key?"

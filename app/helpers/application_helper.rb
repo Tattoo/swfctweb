@@ -14,4 +14,10 @@ module ApplicationHelper
 
   end
 
+  def tf(key)
+    tf = TextFragment.find(:first, :conditions => {:key => key})
+    return tf.value if tf
+    return "Text missing: [#{key}]"
+  end
+
 end

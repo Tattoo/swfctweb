@@ -16,7 +16,9 @@ Swfctweb::Application.routes.draw do |map|
   match 'magazines' => "statics#magazines" 
   match "guide" => "statics#guide"
 
-
+  namespace :admin do
+    resources :text_fragments
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
