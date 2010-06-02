@@ -5,7 +5,23 @@ class Admin::AdminController < ApplicationController
 
   def authenticate
     authenticate_or_request_with_http_basic('admin') do |username, password|
-        username == 'admin' && password == 'admin' #TODO: ENV
+        username == get_username && password == get_password
+    end
+  end
+
+  def get_username
+    if ENV['RAILS_ENV'] == 'production'
+      'swfctadmin'
+    else
+      'admin'
+    end
+  end
+
+  def get_password
+    if ENV['RAILS_ENV'] == 'production'
+      'SoftwareFactory2010-2013'
+    else
+      'admin'
     end
   end
 end
