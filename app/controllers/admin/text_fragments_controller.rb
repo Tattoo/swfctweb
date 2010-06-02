@@ -4,21 +4,6 @@ class Admin::TextFragmentsController < Admin::AdminController
     @text_fragments = TextFragment.all
   end
 
-  def new
-    @text_fragment = TextFragment.new
-  end
-
-  def create
-    @text_fragment = TextFragment.new(params[:text_fragment])
-    if @text_fragment.save
-      flash[:notice] = "Saved!"
-      redirect_to admin_text_fragments_path
-    else
-      flash[:error] = "Errors!"
-      render :new
-    end
-  end
-
   def edit
     @text_fragment = TextFragment.find(params[:id])
   end
