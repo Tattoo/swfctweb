@@ -15,7 +15,7 @@ Swfctweb::Application.routes.draw do |map|
   match 'sneak_peek' => "statics#sneak_peek"
   match 'magazines' => "statics#magazines" 
   match "guide" => "statics#guide"
-  match 'launchevent' => "statics#launch_event"
+  match 'openingday' => "statics#launch_event"
 
   namespace :admin do
     resources :text_fragments
