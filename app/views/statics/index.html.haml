@@ -46,35 +46,40 @@
 %section#right-column
   - box do
     %hgroup
+      %h3 Ongoing project
+    %a{:href => projects_planesweep_path} Planesweep
+    is a project where 12 students are building innovative coordination system to be used on airports.
+    %br
+    %br
+    %a{:href => projects_path}
+      See old projects
+
+  %br
+
+  - box do
+    %hgroup
       %h3 What's going on?
     Start your journey into the Software Factory, 
     %a{:href => sneak_peek_path} Take a sneak peek inside!
 
   %br
 
-  - box do
+  - box(:style_rules => "overflow: auto;") do
     %hgroup
-      %h3 Magazine
+      %h3 Software Factory Magazine
 
-    Read the insight of people involved in Software Factory
-    %br
-    %br    
-    %ul#magazine-list
-      %li
-        %a{:href => magazines_path}
-          Vol. 1
-  %br
+    %section{:style => "float: left; width: 11em;"}
+      Read the insight of people involved in Software Factory
 
-  - box do
-    %hgroup
-      %h3 Ongoing project
-    %a{:href => projects_planesweep_path} Planesweep
-    is a project where 12 students are building innovative coordination system to be used on airports
-    
-    %br
-    %br
-    %a{:href => projects_path}
-      See old projects
+    %section{:style => "float: right; width: 6em;"}
+      %a{:href => magazines_path}
+        = image_tag "magazine-cover-1.png"
+        %br
+        Vol. 1
+
+    %br.clear
+    %section
+      The next Software Factory Magazine will be published in fall 2010.
 
   %br
   /
