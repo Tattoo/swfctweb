@@ -354,3 +354,45 @@ article.project-desc > section {
   margin-bottom: 0; }
 #main_intro-box > section > hgroup h2 {
   margin-bottom: 0.5em; }
+
+#opening-box {
+  overflow: auto;
+  text-align: left; }
+
+.opening_column {
+  width: 48%; }
+  .opening_column > hgroup {
+    display: block;
+    margin: 3em 0 1em 0; }
+    .opening_column > hgroup .time {
+      margin-left: 1.5em;
+      margin-bottom: 0.7em; }
+  .opening_column > section {
+    margin-bottom: 1em; }
+    .opening_column > section > img {
+      display: block;
+      margin-right: 1.2em;
+      margin-bottom: 1em; }
+    .opening_column > section > a {
+      font-size: 0.9em; }
+
+.opening_bottom {
+  width: 27em;
+  margin-left: auto;
+  margin-right: auto; }
+  .opening_bottom > section > ul {
+    list-style-type: square; }
+
+.opening-pic {
+  float: left;
+  margin: 0 1em 1em 0;
+  width: 250px; }
+  .opening-pic > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+#opening-pics {
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto; }
