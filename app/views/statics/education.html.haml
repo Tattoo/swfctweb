@@ -2,11 +2,45 @@
 %section#left-column
   - box do 
     %hgroup
-      %h2 Bringing passion to development
+      %h2 Education - Bringing Passion to Development
 
     %article.intro
       %section
-        !=tf('education.text')
+        Software Factory projects combine the best advantages of both business and education. Work environment is very close to real work life but on the other hand in Software Factory projects:
+        %ul
+          %li You can use the latest methods, tools, and languages. No need to work with systems created ten years ago with the methods fifteen years old.
+          %li You are free to experiment new things. No need to do the same thing every day.
+          %li You can have a great influence how things are done. No need to listen what the boss is saying.
+
+      %hgroup
+        %h2 Course information
+
+      %section
+        Software Factory projects are courses that last one period (seven weeks). Courses are organized in the Department of Computer Science, in University of Helsinki five times a year. You can get 10 or 12 credits depending how much you want to work. By working four days a week and six hours a day, you get 10 credits. With five days you get 12. However, taking a Software Factory course does not mean that you cannot have any other courses at the same time. The work hours are flexible, the team decides when you should be present.
+
+      %hgroup
+        %h2 Working opportunities
+
+      %section
+        Software Factory provides also with a working opportunity for the students. The projects are always real business cases with a company behind them. If you are good, the company has a motivation to hire you.
+
+      %hgroup
+        %h2 Research opportunities
+
+      %section
+        Wondering how to do your master's or bachelor's thesis, or maybe a seminar paper? Software Factory provides a unique setup for doing research. No matter whether you are interested in software development methods, testing, web frameworks, or something else, you can get great empirical material from Software Factory. Read more from
+        =link_to("Research section", research_path)
+        \.
+
+      %hgroup
+        %h2 I did not get it...
+
+      %section
+        If something is still bothering you, please send a question with the
+        =link_to("contact form", contact_path)
+        \.
+
+      %hr
 
       %section
         %span.emphasis Education 
@@ -18,8 +52,8 @@
           from University of Helsinki
 
         %section{:class => "intro_person-right"}
-          = image_tag "contact/juha.png", :align => "right"
-          %a{:mailto => "juha.taina@cs.helsinki.fi"}Dr. Juha Taina 
+          = image_tag "contact/fabian.png", :align => "right"
+          %a{:mailto => "fabian.fagerholm@cs.helsinki.fi"}Fabian Fagerholm
           from University of Helsinki
 
   = image_tag "bubble-education.png", :id => "education_bubble"
@@ -28,9 +62,12 @@
     %hgroup
       %h3 How to get in?
 
-    To be part of the unique Software Factory Experience, 
+    Software Factory projects are organized as courses in the Department of Computer Science, in University of Helsinki. If you are a student of the university, register with
     %a{:href => "https://ilmo.cs.helsinki.fi/ilmo/Yk?kk=582659&lk=V&lv=2010&tp=K&knro=1&kieli=S&toiminta=Luentokurssit", :target => "_blank"}
-      register from here
+      Ilmo
+    \. Otherwise please use the
+    =link_to("contact form", contact_path)
+    \.
 
   %br
 
@@ -39,8 +76,6 @@
       %h3
         What is it like to work in Factory?
 
-    Want to know the day-to-day?
-    %br
     %a{:href => guide_path}
-      Read the Software Factory Guide for teams
+      Guide for Software Factory Teams - Experiences from the First Project (.pdf)
 
