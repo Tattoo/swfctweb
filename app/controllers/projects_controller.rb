@@ -2,13 +2,8 @@ class ProjectsController < ApplicationController
   def index
   end
 
-  def gnobles
-  end
-
-  def yfactor
-  end
-
-  def planesweep
+  def show
+    @project = Project.find(:first, :conditions => {:key => params[:id]})
   end
 
 end

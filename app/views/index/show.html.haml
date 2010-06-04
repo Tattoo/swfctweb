@@ -47,12 +47,15 @@
   - box do
     %hgroup
       %h3 Ongoing project
-    %a{:href => projects_planesweep_path} Planesweep
-    is a project where 12 students are building innovative coordination system to be used on airports.
+
+    - if @active_project
+      =link_to @active_project.name, "/projects/#{@active_project.key}"
+      \-
+      =@active_project.description
     %br
     %br
     %a{:href => projects_path}
-      See old projects
+      See all projects
 
   %br
 

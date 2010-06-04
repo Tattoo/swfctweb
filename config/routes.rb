@@ -1,9 +1,4 @@
 Swfctweb::Application.routes.draw do |map|
-  get "projects/gnobles"
-  get "projects/yfactor"
-  get "projects/planesweep"
-
-
   root :to => "index#show"
   match 'vision' => "statics#vision"
   match 'education' => "statics#education"
@@ -18,6 +13,8 @@ Swfctweb::Application.routes.draw do |map|
   match 'openingday' => "statics#launch_event"
 
   resource :index, :controller => :index
+
+  resources :projects
 
   namespace :admin do
     resources :text_fragments

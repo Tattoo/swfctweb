@@ -1,0 +1,22 @@
+- box do
+  %hgroup
+    %h1
+      =@project.name
+
+  %i
+    =@project.description
+  %br
+  %br
+
+  %span.emphasis Time:
+  =format_date(@project.starts_at)
+  \-
+  =format_date(@project.ends_at)
+  %br
+  %span.emphasis Technologies / tools / methods:
+  =@project.technologies
+
+  %br
+  
+  %hr
+  =render :partial => @project.key
