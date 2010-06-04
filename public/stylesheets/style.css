@@ -38,6 +38,34 @@ header {
     margin-left: auto;
     margin-right: auto; }
 
+footer {
+  width: 58em;
+  margin-top: 2em;
+  background-color: #fdfdfd;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  opacity: 0.75; }
+  footer > section {
+    width: 45em;
+    margin-left: auto;
+    margin-right: auto; }
+    footer > section > section {
+      width: 15em;
+      float: left;
+      text-align: center; }
+  footer a {
+    color: #ff8500;
+    font-size: 0.8em;
+    font-weight: lighter; }
+
 #header_logo {
   float: left; }
 
