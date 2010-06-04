@@ -12,8 +12,9 @@ describe Admin::TextFragmentsController do
       get :index
     end
 
-    it "should assign @text_fragments"
-      #assigns[:text_fragments].should == @all_tf #TODO: why does not this work?!?!?!
+    it "should assign @text_fragments" do
+      assigns(:text_fragments).should == @all_tf
+    end
 
     it "should render index" do
       response.should render_template('index')
@@ -28,8 +29,9 @@ describe Admin::TextFragmentsController do
       get :edit, :id => @id
     end
 
-    it "should assign @text_fragment"
-      #assigns[:text_fragment].should == @tf #TODO: why does not this work?!?!?!
+    it "should assign @text_fragment" do
+      assigns(:text_fragment).should == @tf
+    end
 
     it "should render edit" do
       response.should render_template('edit')
