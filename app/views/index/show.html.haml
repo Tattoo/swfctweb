@@ -46,13 +46,13 @@
 %section#right-column
   - box do
     %hgroup
-      %h3 Ongoing project
+      %h3 Ongoing projects
 
-    - if @active_project
-      =link_to @active_project.name, "/projects/#{@active_project.key}"
+    - @active_projects.each do |p|
+      =link_to p.name, "/projects/#{p.key}"
       \-
-      =@active_project.description
-    %br
+      =p.description if p.description
+      %br
     %br
     %a{:href => projects_path}
       See all projects

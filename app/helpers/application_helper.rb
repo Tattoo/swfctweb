@@ -24,4 +24,8 @@ module ApplicationHelper
     date.strftime("%b, %d %Y")
   end
 
+  def format_date_range(start_date, end_date)
+    "#{start_date.strftime("%b, %d %Y")} - #{end_date.strftime("%b, %d %Y")}"
+  end
+
 end

@@ -1,7 +1,7 @@
 class IndexController < ApplicationController
 
   def show
-    @active_project = Project.active_project
+    @active_projects = Project.active_projects
   end
 
 end

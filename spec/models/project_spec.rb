@@ -76,38 +76,76 @@ describe Project do
     end
   end
 
-  describe "active_project" do
-    describe "no active projects" do
+  describe "projects based on time" do
+    describe "no projects" do
       before do
-        Project.destroy_all
+        Project.destroy_all #TODO: why is this needed?
       end
 
-      it "should return nil" do
-        Project.active_project.should == nil
+      it "past projects should be empty" do
+        Project.past_projects.should be_empty
+      end
+
+      it "active projects should be empty" do
+        Project.active_projects.should be_empty
+      end
+
+      it "future projects should be empty" do
+        Project.future_projects.should be_empty
       end
     end
 
-    # currently assumed that only one active project at a time (will change at least in Global SF)
-    describe "active project" do
+    describe "projects" do
       before do
-        @valid_attrs[:name] = "Old project"
-        @valid_attrs[:starts_at] = Date.today - 20
-        @valid_attrs[:ends_at] = Date.today - 10
-        @old = Project.create(@valid_attrs)
+        Project.destroy_all #TODO: why is this needed?
+        @attrs = @valid_attrs
+        @attrs[:name] = "Old project 1"
+        @attrs[:starts_at] = Date.today - 120
+        @attrs[:ends_at] = Date.today - 110
+        @old1 = Project.create(@attrs)
 
-        @valid_attrs[:name] = "Active project"
-        @valid_attrs[:starts_at] = Date.today - 5
-        @valid_attrs[:ends_at] = Date.today + 10
-        @active = Project.create(@valid_attrs)
+        @attrs[:name] = "Old project 2"
+        @attrs[:starts_at] = Date.today - 20
+        @attrs[:ends_at] = Date.today - 1
+        @old2 = Project.create(@attrs)
 
-        @valid_attrs[:name] = "Future project"
-        @valid_attrs[:starts_at] = Date.today + 20
-        @valid_attrs[:ends_at] = Date.today + 30
-        @future = Project.create(@valid_attrs)
+        @attrs[:name] = "Active project 1"
+        @attrs[:starts_at] = Date.today - 5
+        @attrs[:ends_at] = Date.today + 10
+        @active1 = Project.create(@attrs)
+
+        @attrs[:name] = "Active project 2"
+        @attrs[:starts_at] = Date.today - 15
+        @attrs[:ends_at] = Date.today + 20
+        @active2 = Project.create(@attrs)
+
+        @attrs[:name] = "Future project 1"
+        @attrs[:starts_at] = Date.today + 1
+        @attrs[:ends_at] = Date.today + 30
+        @future1 = Project.create(@attrs)
+
+        @attrs[:name] = "Future project 2"
+        @attrs[:starts_at] = Date.today + 120
+        @attrs[:ends_at] = Date.today + 130
+        @future2 = Project.create(@attrs)
       end
 
-      it "should return the active project" do
-        Project.active_project.name.should == "Active project"
+      it "past" do
+        p = Project.past_projects
+        p[0].name.should == @old2.name #notice the order
+        p[1].name.should == @old1.name
+      end
+
+      it "active" do
+        p = Project.active_projects
+        p[0].name.should == @active1.name
+        p[1].name.should == @active2.name
+      end
+
+      it "future" do
+        p = Project.future_projects
+        p[0].name.should == @future1.name
+        p[1].name.should == @future2.name
       end
     end
   end

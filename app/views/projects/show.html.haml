@@ -4,9 +4,12 @@
       =@project.name
 
   %i
-    =@project.description
-  %br
-  %br
+    - if @project.description
+      =@project.description
+    - else
+      Project description available later.
+    %br
+    %br
 
   %span.emphasis Time:
   =format_date(@project.starts_at)
@@ -14,9 +17,12 @@
   =format_date(@project.ends_at)
   %br
   %span.emphasis Technologies / tools / methods:
-  =@project.technologies
+  - if @project.technologies
+    =@project.technologies
+  - else
+    To be announced.
 
   %br
   
   %hr
-  =render :partial => @project.key
+  =render :partial => @project.key rescue nil

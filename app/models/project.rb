@@ -5,6 +5,8 @@ class Project
   field :name
   field :starts_at, :type => Date
   field :ends_at, :type => Date
+  field :description
+  field :technologies
 
   validates :key, :presence => true
   validates :name, :presence => true
@@ -16,9 +18,16 @@ class Project
     starts_at <= Date.today and ends_at >= Date.today
   end
 
-  def self.active_project
-    # currently assumed that only one active project at a time (will change at least in Global SF)
-    Project.find(:first, :conditions => {:starts_at.lte => Time.now, :ends_at.gte => Time.now})
+  def self.past_projects
+    Project.where(:ends_at.lt => Time.now).order_by([:ends_at, :desc])
+  end
+
+  def self.active_projects
+    Project.where(:starts_at.lte => Time.now, :ends_at.gte => Time.now)
+  end
+
+  def self.future_projects
+    Project.where(:starts_at.gt => Time.now).order_by([:starts_at, :asc])
   end
 
 private

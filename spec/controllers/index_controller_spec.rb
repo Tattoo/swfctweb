@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe IndexController do
   describe "#show" do
     before do
-      @project = mock_model(Project)
+      @projects = mock(Array)
     end
 
     it "should render show" do
@@ -12,9 +12,9 @@ describe IndexController do
     end
 
     it "should assign project" do
-      Project.should_receive(:active_project).and_return(@project)
+      Project.should_receive(:active_projects).and_return(@projects)
       get :show
-      assigns(:active_project).should == @project
+      assigns(:active_projects).should == @projects
     end
   end
 end

@@ -7,6 +7,27 @@ describe ProjectsController do
       get :index
       response.should render_template(:index)
     end
+
+    it "should assign past projects" do
+      @p = mock(Array)
+      Project.should_receive(:past_projects).and_return(@p)
+      get :index
+      assigns(:past_projects).should == @p
+    end
+
+    it "should assign active projects" do
+      @p = mock(Array)
+      Project.should_receive(:active_projects).and_return(@p)
+      get :index
+      assigns(:active_projects).should == @p
+    end
+
+    it "should assign future projects" do
+      @p = mock(Array)
+      Project.should_receive(:future_projects).and_return(@p)
+      get :index
+      assigns(:future_projects).should == @p
+    end
   end
 
   describe "show" do
