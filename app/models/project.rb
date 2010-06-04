@@ -18,6 +18,10 @@ class Project
     starts_at <= Date.today and ends_at >= Date.today
   end
 
+  def upcoming?
+    starts_at > Date.today
+  end
+
   def self.past_projects
     Project.where(:ends_at.lt => Time.now).order_by([:ends_at, :desc])
   end

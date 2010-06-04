@@ -76,6 +76,26 @@ describe Project do
     end
   end
 
+  describe "upcoming" do
+    it "is not upcoming when start date is today" do
+      @project.starts_at = Date.today
+      @project.ends_at = Date.today + 1
+      @project.should_not be_upcoming
+    end
+
+    it "is not upcoming when start date is in past" do
+      @project.starts_at = Date.today - 2
+      @project.ends_at = Date.today - 1
+      @project.should_not be_upcoming
+    end
+
+    it "is upcoming when start date is in future" do
+      @project.starts_at = Date.today + 1
+      @project.ends_at = Date.today + 2
+      @project.should be_upcoming
+    end
+  end
+
   describe "projects based on time" do
     describe "no projects" do
       before do

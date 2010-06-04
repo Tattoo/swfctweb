@@ -28,4 +28,8 @@ module ApplicationHelper
     "#{start_date.strftime("%b, %d %Y")} - #{end_date.strftime("%b, %d %Y")}"
   end
 
+  def register_link
+    link_to "Register", "http://ilmo.cs.helsinki.fi", :id => "projects_register-link", :target => "_blank"
+  end
+
 end
