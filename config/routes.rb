@@ -4,7 +4,7 @@ Swfctweb::Application.routes.draw do |map|
   get "projects/planesweep"
 
 
-  root :to => "statics#index" 
+  root :to => "index#show"
   match 'vision' => "statics#vision"
   match 'education' => "statics#education"
   match 'research' => "statics#research"
@@ -16,6 +16,8 @@ Swfctweb::Application.routes.draw do |map|
   match 'magazines' => "statics#magazines" 
   match "guide" => "statics#guide"
   match 'openingday' => "statics#launch_event"
+
+  resource :index, :controller => :index
 
   namespace :admin do
     resources :text_fragments
