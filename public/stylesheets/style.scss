@@ -45,6 +45,8 @@ header {
   }
 }
 
+
+
 #header_logo {
   float: left;
 }
@@ -68,7 +70,6 @@ header {
   display: inline-block;
   list-style-type: none;
   float: left;
-  //margin-top: 2em;
 }
 
 #menu > li {
@@ -116,17 +117,23 @@ header {
 }
 
 .box {
+  $radius: 10px;
+  $opacity-filter: 85;
+  $opacity: $opacity-filter / 100; // 85 => 0.85
+
   width: 100%;
   color: #383838;
   background-color: white;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+
   padding: 1em 0em;
-  filter:alpha(opacity=85);
-  -moz-opacity:0.85;
-  -khtml-opacity: 0.85;
-  opacity: 0.85;
+
+  filter:alpha(opacity=$opacity-filter);
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
 
   & > section{
     margin: 0em 1em;
