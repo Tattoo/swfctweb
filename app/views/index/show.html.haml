@@ -46,16 +46,34 @@
 %section#right-column
   - box do
     %hgroup
-      %h3 Ongoing projects
+      %h3 Ongoing Projects
 
-    - @active_projects.each do |p|
-      =link_to p.name, "/projects/#{p.key}"
-      \-
-      =p.description if p.description
-      %br
+    - unless @active_projects.empty?
+      - @active_projects.each do |p|
+        =link_to p.name, "/projects/#{p.key}"
+        - if p.description
+          \-
+          =p.description
+        %br
+    - else
+      Software Factory is having a break...
     %br
     %a{:href => projects_path}
-      See all projects
+      See upcoming and past projects
+
+  - unless @future_projects.empty?
+    %br
+    - box do
+      %hgroup
+        %h3 Next Project
+
+      - fp = @future_projects[0]
+      =link_to fp.name, "/projects/#{fp.key}"
+      - if fp.description
+        \-
+        =fp.description
+      %br
+      =format_date_range(fp.starts_at, fp.ends_at)
 
   %br
 
