@@ -22,6 +22,16 @@ class Project
     starts_at > Date.today
   end
 
+  def previous
+    projects = Project.where(:starts_at.lt => starts_at.to_time).order_by([:starts_at, :desc])
+    return projects[0]
+  end
+
+  def next
+    projects = Project.criteria.and(:starts_at.gt => starts_at.to_time, :key.ne => key).order_by([:starts_at, :asc])
+    return projects[0]
+  end
+
   def self.past_projects
     Project.where(:ends_at.lt => Time.now).order_by([:ends_at, :desc])
   end

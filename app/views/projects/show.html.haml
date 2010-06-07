@@ -32,3 +32,15 @@
   
   %hr
   =render :partial => @project.key rescue nil
+
+  %hr
+  %span.previous_project
+    - if @project.previous
+      Previous:
+      =link_to @project.previous.name, "/projects/#{@project.previous.key}"
+  %span.next_project
+    - if @project.next
+      Next:
+      =link_to @project.next.name, "/projects/#{@project.next.key}"
+  %br
+

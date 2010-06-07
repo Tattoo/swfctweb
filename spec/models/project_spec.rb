@@ -115,37 +115,37 @@ describe Project do
       end
     end
 
-    describe "projects" do
+    describe "project timing" do
       before do
         Project.destroy_all #TODO: why is this needed?
         @attrs = @valid_attrs
 
-        @attrs[:name] = "Future project 2"
+        @attrs[:key] = "Future project 2"
         @attrs[:starts_at] = Date.today + 120
         @attrs[:ends_at] = Date.today + 130
         @future2 = Project.create(@attrs)
 
-        @attrs[:name] = "Old project 2"
-        @attrs[:starts_at] = Date.today - 20
+        @attrs[:key] = "Old project 2"
+        @attrs[:starts_at] = Date.today - 40
         @attrs[:ends_at] = Date.today - 1
         @old2 = Project.create(@attrs)
 
-        @attrs[:name] = "Active project 2"
+        @attrs[:key] = "Active project 2"
         @attrs[:starts_at] = Date.today - 15
         @attrs[:ends_at] = Date.today + 20
         @active2 = Project.create(@attrs)
 
-        @attrs[:name] = "Old project 1"
+        @attrs[:key] = "Old project 1"
         @attrs[:starts_at] = Date.today - 120
         @attrs[:ends_at] = Date.today - 110
         @old1 = Project.create(@attrs)
 
-        @attrs[:name] = "Future project 1"
+        @attrs[:key] = "Future project 1"
         @attrs[:starts_at] = Date.today + 1
         @attrs[:ends_at] = Date.today + 30
         @future1 = Project.create(@attrs)
 
-        @attrs[:name] = "Active project 1"
+        @attrs[:key] = "Active project 1"
         @attrs[:starts_at] = Date.today - 25
         @attrs[:ends_at] = Date.today + 10
         @active1 = Project.create(@attrs)
@@ -153,20 +153,48 @@ describe Project do
 
       it "past" do
         p = Project.past_projects
-        p[0].name.should == @old2.name #notice the order
-        p[1].name.should == @old1.name
+        p[0].key.should == @old2.key #notice the order
+        p[1].key.should == @old1.key
       end
 
       it "active" do
         p = Project.active_projects
-        p[0].name.should == @active1.name
-        p[1].name.should == @active2.name
+        p[0].key.should == @active1.key
+        p[1].key.should == @active2.key
       end
 
       it "future" do
         p = Project.future_projects
-        p[0].name.should == @future1.name
-        p[1].name.should == @future2.name
+        p[0].key.should == @future1.key
+        p[1].key.should == @future2.key
+      end
+
+      describe "previous" do
+        it "returns nil when the first project" do
+          @old1.previous.should == nil
+        end
+
+        it "return previous project if this is not the first one" do
+          @future2.previous.key.should == @future1.key
+          @future1.previous.key.should == @active2.key
+          @active2.previous.key.should == @active1.key
+          @active1.previous.key.should == @old2.key
+          @old2.previous.key.should == @old1.key
+        end
+      end
+
+      describe "next" do
+        it "returns nil when the last project" do
+          @future2.next.should == nil
+        end
+
+        it "return next project if this is not the last one" do
+          @old1.next.key.should == @old2.key
+          @old2.next.key.should == @active1.key
+          @active1.next.key.should == @active2.key
+          @active2.next.key.should == @future1.key
+          @future1.next.key.should == @future2.key
+        end
       end
     end
   end
