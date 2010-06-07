@@ -38,7 +38,6 @@ class StaticsController < ApplicationController
   end
 
   def guide
-    redirect_to "/pdf/SF_guide.pdf", :content_type => "application/pdf"
   end
 
   def launch_event

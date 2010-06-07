@@ -198,6 +198,16 @@ header {
   }
 }
 
+#experiences {
+  margin-left: 50px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: #FF8500 2px dotted; }
+  & > section, li {
+    margin-top: 1.5em;
+    font-size: 90%;
+  }
+
 article.intro > section {
   margin-top: 1em;
   margin-bottom: 1em;
