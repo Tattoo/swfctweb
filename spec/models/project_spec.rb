@@ -119,35 +119,36 @@ describe Project do
       before do
         Project.destroy_all #TODO: why is this needed?
         @attrs = @valid_attrs
-        @attrs[:name] = "Old project 1"
-        @attrs[:starts_at] = Date.today - 120
-        @attrs[:ends_at] = Date.today - 110
-        @old1 = Project.create(@attrs)
+
+        @attrs[:name] = "Future project 2"
+        @attrs[:starts_at] = Date.today + 120
+        @attrs[:ends_at] = Date.today + 130
+        @future2 = Project.create(@attrs)
 
         @attrs[:name] = "Old project 2"
         @attrs[:starts_at] = Date.today - 20
         @attrs[:ends_at] = Date.today - 1
         @old2 = Project.create(@attrs)
 
-        @attrs[:name] = "Active project 1"
-        @attrs[:starts_at] = Date.today - 5
-        @attrs[:ends_at] = Date.today + 10
-        @active1 = Project.create(@attrs)
-
         @attrs[:name] = "Active project 2"
         @attrs[:starts_at] = Date.today - 15
         @attrs[:ends_at] = Date.today + 20
         @active2 = Project.create(@attrs)
+
+        @attrs[:name] = "Old project 1"
+        @attrs[:starts_at] = Date.today - 120
+        @attrs[:ends_at] = Date.today - 110
+        @old1 = Project.create(@attrs)
 
         @attrs[:name] = "Future project 1"
         @attrs[:starts_at] = Date.today + 1
         @attrs[:ends_at] = Date.today + 30
         @future1 = Project.create(@attrs)
 
-        @attrs[:name] = "Future project 2"
-        @attrs[:starts_at] = Date.today + 120
-        @attrs[:ends_at] = Date.today + 130
-        @future2 = Project.create(@attrs)
+        @attrs[:name] = "Active project 1"
+        @attrs[:starts_at] = Date.today - 25
+        @attrs[:ends_at] = Date.today + 10
+        @active1 = Project.create(@attrs)
       end
 
       it "past" do

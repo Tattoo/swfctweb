@@ -27,7 +27,7 @@ class Project
   end
 
   def self.active_projects
-    Project.where(:starts_at.lte => Time.now, :ends_at.gte => Time.now)
+    Project.where(:starts_at.lte => Time.now, :ends_at.gte => Time.now).order_by([:starts_at, :asc])
   end
 
   def self.future_projects
