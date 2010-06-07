@@ -28,7 +28,7 @@
     %span.emphasis Research:
     - @project.studies.each do |study|
       ="," if count > 0
-      =link_to study.title, "/"
+      =link_to study.title, "/studies/#{study.key}"
       - count = count + 1
 
   - if @project.upcoming?

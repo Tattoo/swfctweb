@@ -23,8 +23,10 @@ end
 # studies
 studies = [
   {:key => "gradu_henri", :title => "Master's thesis (Henri Karhatsu)", :researchers => "Henri Karhatsu",
+    :research_methods => "Participant observation, thematic interviews",
     :project_keys => ["gnobles", "yfactor"]},
   {:key => "gradu_elena", :title => "Master's thesis (Elena Pirinen)", :researchers => "Elena Pirinen",
+    :research_methods => "Participant observation, thematic interviews",
     :project_keys => ["gnobles"]},
   {:key => "psycho", :title => "Psychological research",
     :researchers => "Markku Verkasalo, Sointu Leikas, Jan-Erik Lonnqvist, Ville Ilmarinen (Institute of Behavioural Sciences, Department of Psychology, University of Helsinki)",

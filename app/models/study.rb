@@ -4,6 +4,7 @@ class Study
   field :key
   field :title
   field :researchers
+  field :research_methods
   field :project_keys, :type => Array
 
   validates_presence_of [:key, :title, :researchers]
