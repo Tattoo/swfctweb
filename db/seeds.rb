@@ -23,10 +23,10 @@ end
 
 # studies
 studies = [
-  {:key => "gradu_henri", :title => "Master's thesis (Henri Karhatsu)", :researchers => "Henri Karhatsu",
+  {:key => "gradu_henri", :title => "Self-organizing software development teams", :researchers => "Henri Karhatsu",
     :research_methods => "Participant observation, thematic interviews",
     :project_keys => ["gnobles", "yfactor"]},
-  {:key => "gradu_elena", :title => "Master's thesis (Elena Pirinen)", :researchers => "Elena Pirinen",
+  {:key => "gradu_elena", :title => "Kanban study", :researchers => "Elena Pirinen",
     :research_methods => "Direct observation, video observation, thematic interviews",
     :project_keys => ["gnobles"]},
   {:key => "psycho", :title => "Psychological research",
