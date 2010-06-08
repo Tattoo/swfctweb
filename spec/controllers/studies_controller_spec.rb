@@ -25,5 +25,19 @@ describe StudiesController do
       response.should redirect_to(root_path)
     end
   end
+
+  describe "#index" do
+    it "should render index" do
+      get :index
+      response.should render_template(:index)
+    end
+
+    it "should assign studies" do
+      @studies = mock(Array)
+      Study.should_receive(:all).and_return(@studies)
+      get :index
+      assigns(:studies).should == @studies
+    end
+  end
 end
 
