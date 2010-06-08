@@ -16,6 +16,7 @@ projects = [
   {:key => "autumn2010-2", :name => "Autumn 2", :starts_at => "2010-11-01", :ends_at => "2010-11-17"},
 ]
 
+Project.destroy_all # remove this if an admin page for projects is created
 projects.each do |project|
   Project.create(project) unless Project.find(:first, :conditions => {:key => project[:key]})
 end
@@ -26,13 +27,15 @@ studies = [
     :research_methods => "Participant observation, thematic interviews",
     :project_keys => ["gnobles", "yfactor"]},
   {:key => "gradu_elena", :title => "Master's thesis (Elena Pirinen)", :researchers => "Elena Pirinen",
-    :research_methods => "Participant observation, thematic interviews",
+    :research_methods => "Direct observation, video observation, thematic interviews",
     :project_keys => ["gnobles"]},
   {:key => "psycho", :title => "Psychological research",
     :researchers => "Markku Verkasalo, Sointu Leikas, Jan-Erik Lonnqvist, Ville Ilmarinen (Institute of Behavioural Sciences, Department of Psychology, University of Helsinki)",
+    :research_methods => "Self-reports of personality, work stress, mood, and work satisfaction via questionnaires. Experience sampling of self-report ratings of social interactions via palmtop computers. Video observation.",
     :project_keys => ["gnobles", "yfactor", "planesweep"]},
 ]
 
+Study.destroy_all # remove this if an admin page for studies is created
 studies.each do |study|
   Study.create(study) unless Study.find(:first, :conditions => {:key => study[:key]})
 end
