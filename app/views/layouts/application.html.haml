@@ -3,13 +3,27 @@
   %head
     %title Software Factory
     = javascript_include_tag "jquery-1.4.1.min.js"
+    = javascript_include_tag "jquery.lightbox-0.5.pack.js"
     :javascript
       $(document).ready(function(){
+        // protect email addresses from spam bots
         $("a.email").each(function(){
           this.href = "mailto:" + this.rel.replace('(replace at)', "@");
         });
+
+        // setup lightbox
+        $(".opening-pic > a").lightBox({
+          fixedNavigation: true,
+          imageLoading: '/images/lightbox-ico-loading.gif',
+          imageBtnClose: '/images/lightbox-btn-close.gif',
+          imageBtnPrev: '/images/lightbox-btn-prev.gif',
+          imageBtnNext: '/images/lightbox-btn-next.gif'
+        });
+
       });
     = stylesheet_link_tag "style"
+    = stylesheet_link_tag "jquery.lightbox-0.5"
+
   %body
     %header
       %section
