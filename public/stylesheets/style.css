@@ -45,6 +45,8 @@ footer {
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  bottom: 0;
   -moz-border-radius-topleft: 10px;
   -moz-border-radius-topright: 10px;
   -webkit-border-top-left-radius: 10px;
@@ -183,10 +185,9 @@ footer {
   margin-bottom: 10px;
   padding: 5px;
   border: #FF8500 2px dotted; }
-  #experiences > section, li {
+  #experiences > section, #experiences li {
     margin-top: 1.5em;
-    font-size: 90%;
-  }
+    font-size: 90%; }
 
 article.intro > section {
   margin-top: 1em;
