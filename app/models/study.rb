@@ -6,6 +6,7 @@ class Study
   field :researchers
   field :research_methods
   field :project_keys, :type => Array
+  field :description
 
   #index :key, :unique => true
 
