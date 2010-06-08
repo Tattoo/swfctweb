@@ -3,12 +3,6 @@
   %head
     %title Software Factory
     = javascript_include_tag "jquery-1.4.1.min.js"
-    :javascript
-      $(document).ready(function(){
-        $("#menu > li").click(function(){
-          window.location.href = $(this).children("a").attr("href");
-        });
-      });
     = stylesheet_link_tag "style"
   %body
     %header
@@ -19,12 +13,9 @@
         = image_tag @slogan_name, :id => "slogan-image"
 
         %nav#menu
-          %li.menu_education
-            %a{:href => education_path}
-          %li.menu_research
-            %a{:href => research_path}
-          %li.menu_entrepreneurship
-            %a{:href => entrepreneurship_path}
+          %a.menu_education{:href => education_path}            
+          %a.menu_research{:href => research_path}
+          %a.menu_entrepreneurship{:href => entrepreneurship_path}
         
 
         %a{:href => contact_path, :id => "contact-link"}

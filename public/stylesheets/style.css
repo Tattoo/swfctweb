@@ -85,26 +85,25 @@ footer {
 
 #menu {
   display: inline-block;
-  list-style-type: none;
   float: left; }
 
-#menu > li {
+#menu > a {
   float: left;
   margin: 0 5px;
   height: 35px;
   width: 123px;
   cursor: pointer; }
-  #menu > li.menu_education {
+  #menu > a.menu_education {
     background: url(/images/sprite.png) no-repeat;
     background-position: 0 -280px; }
-  #menu > li.menu_research {
+  #menu > a.menu_research {
     background: url(/images/sprite.png) no-repeat;
     background-position: -124px -280px; }
-  #menu > li.menu_entrepreneurship {
+  #menu > a.menu_entrepreneurship {
     width: 182px;
     background: url(/images/sprite.png) no-repeat;
     background-position: -250px -280px; }
-  #menu > li > a {
+  #menu > a > a {
     visibility: hidden; }
 
 #contact-link {
