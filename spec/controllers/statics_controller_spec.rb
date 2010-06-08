@@ -11,4 +11,11 @@ describe StaticsController do
     response.should render_template(:guide)
   end
 
+  describe "entrepreneurship" do
+    it "should render entrepreneurship" do
+      get :entrepreneurship
+      response.should render_template(:entrepreneurship)
+    end
+  end
+
 end
