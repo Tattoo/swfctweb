@@ -1,3 +1,5 @@
+$factory-orange: #FF8500;
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,7 +29,7 @@ body {
 }
 
 a {
-  color: #ff8500;
+  color: $factory-orange;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -45,7 +47,48 @@ header {
   }
 }
 
+footer {
+  $radius: 10px;
+  $opacity-filter: 75;
+  $opacity: $opacity-filter / 100; // 65 => 0.65
+ 
+  width: 58em;
+  margin-top: 2em;
+  background-color: #fdfdfd;  
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
 
+
+  -moz-border-radius-topleft: $radius;
+  -moz-border-radius-topright: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+
+  filter:alpha(opacity=$opacity-filter);
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+
+
+  & > section {
+    width: 45em;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > section {
+      width: 15em;
+      float: left;
+      text-align: center;
+    }
+  }
+
+  & a {
+    color: $factory-orange;
+    font-size: 0.8em;
+    font-weight: lighter;
+  }
+}
 
 #header_logo {
   float: left;
