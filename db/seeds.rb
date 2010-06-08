@@ -13,7 +13,7 @@ projects = [
     :technologies => "Scala, Lift, CouchDB, Javascript, TDD, Kanban",
     :study_keys => ["psycho"]},
   {:key => "autumn2010-1", :name => "Autumn 1", :starts_at => "2010-09-06", :ends_at => "2010-10-21"},
-  {:key => "autumn2010-2", :name => "Autumn 2", :starts_at => "2010-11-01", :ends_at => "2010-11-17"},
+  {:key => "autumn2010-2", :name => "Autumn 2", :starts_at => "2010-11-01", :ends_at => "2010-12-17"},
 ]
 
 Project.destroy_all # remove this if an admin page for projects is created
