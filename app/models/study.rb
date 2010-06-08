@@ -7,6 +7,8 @@ class Study
   field :research_methods
   field :project_keys, :type => Array
 
+  index :key, :unique => true
+
   validates_presence_of [:key, :title, :researchers]
 
   def projects

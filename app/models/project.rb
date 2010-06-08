@@ -9,6 +9,8 @@ class Project
   field :technologies
   field :study_keys, :type => Array
 
+  index :key, :unique => true
+
   validates :key, :presence => true
   validates :name, :presence => true
   validates :starts_at, :presence => true
