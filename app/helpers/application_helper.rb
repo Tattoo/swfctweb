@@ -20,4 +20,16 @@ module ApplicationHelper
     return "Text missing: [#{key}]"
   end
 
+  def format_date(date)
+    date.strftime("%b, %d %Y")
+  end
+
+  def format_date_range(start_date, end_date)
+    "#{start_date.strftime("%b, %d %Y")} - #{end_date.strftime("%b, %d %Y")}"
+  end
+
+  def register_link
+    link_to "Register", "http://ilmo.cs.helsinki.fi", :id => "projects_register-link", :target => "_blank"
+  end
+
 end

@@ -2,35 +2,21 @@
   - box(:cssClasses => "multi-column") do
     %hgroup
       %h2 Next in the pipeline
-
-    / %a{:href => "#", :class => "project"}>
-    TBA, Sep - Oct 2010
-    %br
-    TBA, Nov - Dec 2010
-    
-    %br
-    %br
-
-    %a{:href => "http://ilmo.cs.helsinki.fi", :id => "projects_register-link", :target => "_blank"}
-      Register
+    =render :partial => "project_list", :locals => { :projects => @future_projects }
+    =register_link
 
   - box(:cssClasses => "multi-column") do
     %hgroup
-      %h2 Right now
-    %a{:href => projects_planesweep_path, :class => "project"}>Planesweep
-    , May - Jun 2010
-    
+      %h2 Ongoing
+    - unless @active_projects.empty?
+      =render :partial => "project_list", :locals => { :projects => @active_projects }
+    - else
+      No ongoing projects at the moment.
 
   - box(:cssClasses => "multi-column") do 
     %hgroup
       %h2 Past 
-    %ul
-      %li
-        %a{:href => projects_yfactor_path, :class => "project"}>Y-factor
-        , Mar - Apr 2010
-      %li
-        %a{:href => projects_gnobles_path, :class => "project"}>Gnobles
-        , Jan - Feb 2010
+    =render :partial => "project_list", :locals => { :projects => @past_projects }
 /
   %br.clear
 

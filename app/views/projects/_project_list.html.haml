@@ -1,0 +1,6 @@
+- projects.each do |p|
+  =link_to p.name, "/projects/#{p.key}"
+  %br
+  =format_date_range(p.starts_at, p.ends_at)
+  %br
+  %br

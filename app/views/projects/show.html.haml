@@ -1,0 +1,46 @@
+- box do
+  %hgroup
+    %h1
+      =@project.name
+
+  %i
+    - if @project.description
+      =@project.description
+    - else
+      Project description available later.
+    %br
+    %br
+
+  %span.emphasis Time:
+  =format_date(@project.starts_at)
+  \-
+  =format_date(@project.ends_at)
+  %br
+  %span.emphasis Technologies / tools / methods:
+  - if @project.technologies
+    =@project.technologies
+  - else
+    To be announced.
+
+  - if @project.upcoming?
+    %br
+    %br
+    =register_link
+    (Note: Registration may not have started yet.)
+
+  %br
+  
+  %hr
+  =render :partial => @project.key rescue nil
+
+  %hr
+  %span.previous_project
+    - if @project.previous
+      Previous:
+      =link_to @project.previous.name, "/projects/#{@project.previous.key}"
+  %span.next_project
+    - if @project.next
+      Next:
+      =link_to @project.next.name, "/projects/#{@project.next.key}"
+  %br
+
