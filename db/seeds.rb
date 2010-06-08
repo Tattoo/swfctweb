@@ -13,7 +13,7 @@ projects = [
     :technologies => "Scala, Lift, CouchDB, Javascript, TDD, Kanban",
     :study_keys => ["psycho"]},
   {:key => "autumn2010-1", :name => "Autumn 1", :starts_at => "2010-09-06", :ends_at => "2010-10-21"},
-  {:key => "autumn2010-2", :name => "Autumn 2", :starts_at => "2010-11-01", :ends_at => "2010-11-17"},
+  {:key => "autumn2010-2", :name => "Autumn 2", :starts_at => "2010-11-01", :ends_at => "2010-12-17"},
 ]
 
 Project.destroy_all # remove this if an admin page for projects is created
@@ -23,15 +23,18 @@ end
 
 # studies
 studies = [
-  {:key => "gradu_henri", :title => "Master's thesis (Henri Karhatsu)", :researchers => "Henri Karhatsu",
+  {:key => "gradu_henri", :title => "Self-organizing software development teams", :researchers => "Henri Karhatsu",
     :research_methods => "Participant observation, thematic interviews",
+    :description => "Master's thesis of building self-organizing software development teams.",
     :project_keys => ["gnobles", "yfactor"]},
-  {:key => "gradu_elena", :title => "Master's thesis (Elena Pirinen)", :researchers => "Elena Pirinen",
+  {:key => "gradu_elena", :title => "Kanban study", :researchers => "Elena Pirinen",
     :research_methods => "Direct observation, video observation, thematic interviews",
+    :description => "Master's thesis of how Kanban's influence on software developer's work and how value flows in Kanban.",
     :project_keys => ["gnobles"]},
   {:key => "psycho", :title => "Psychological research",
     :researchers => "Markku Verkasalo, Sointu Leikas, Jan-Erik Lonnqvist, Ville Ilmarinen (Institute of Behavioural Sciences, Department of Psychology, University of Helsinki)",
     :research_methods => "Self-reports of personality, work stress, mood, and work satisfaction via questionnaires. Experience sampling of self-report ratings of social interactions via palmtop computers. Video observation.",
+    :description => "Examining basic relations between objective features of a situation, subjective experience of a situation, personality, affect, and behavior.",
     :project_keys => ["gnobles", "yfactor", "planesweep"]},
   {:key => "waste_marko", :title => "Finding waste", :researchers => "Marko Ikonen",
     :research_methods => "Direct observation, thematic interviews",
