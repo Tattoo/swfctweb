@@ -3,6 +3,12 @@
     %h1
       =@study.title
 
+  - if @study.description
+    %i
+      =@study.description
+    %br
+    %br
+
   %span.emphasis Researcher(s):
   =@study.researchers
 
