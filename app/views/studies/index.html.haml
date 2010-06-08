@@ -2,7 +2,10 @@
   %hgroup
     %h1 Research in Software Factory
 
-  %section
-    - @studies.each do |study|
+  - @studies.each do |study|
+    %section
       =link_to study.title, "/studies/#{study.key}"
-      %br
+      - if study.description
+        \-
+        =study.description
+    %br
