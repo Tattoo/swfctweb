@@ -530,6 +530,8 @@ article.project-desc > section {
 }
 
 #main_intro-box > section {
+  overflow: auto;
+
   & > hgroup h1 {
     margin-bottom: 0;
   }

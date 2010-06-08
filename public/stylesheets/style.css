@@ -383,10 +383,12 @@ article.project-desc > section {
     display: block;
     margin: 0 auto 1em auto; }
 
-#main_intro-box > section > hgroup h1 {
-  margin-bottom: 0; }
-#main_intro-box > section > hgroup h2 {
-  margin-bottom: 0.5em; }
+#main_intro-box > section {
+  overflow: auto; }
+  #main_intro-box > section > hgroup h1 {
+    margin-bottom: 0; }
+  #main_intro-box > section > hgroup h2 {
+    margin-bottom: 0.5em; }
 
 #opening-box {
   overflow: auto;
