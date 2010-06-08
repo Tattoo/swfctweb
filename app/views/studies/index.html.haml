@@ -1,0 +1,8 @@
+- box do
+  %hgroup
+    %h1 Research in Software Factory
+
+  %section
+    - @studies.each do |study|
+      =link_to study.title, "/studies/#{study.key}"
+      %br

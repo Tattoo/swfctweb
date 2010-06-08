@@ -15,6 +15,7 @@ Swfctweb::Application.routes.draw do |map|
   resource :index, :controller => :index
 
   resources :projects
+  resources :studies
 
   namespace :admin do
     resources :text_fragments

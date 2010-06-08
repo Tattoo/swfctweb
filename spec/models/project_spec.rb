@@ -198,5 +198,32 @@ describe Project do
       end
     end
   end
+
+  describe "studies" do
+    describe "none" do
+      @project = Project.new()
+      @project.studies.should == []
+    end
+
+    describe "exists" do
+      before do
+        Study.create!(:key => "study1", :title => "title1", :researchers => "res1")
+        Study.create!(:key => "study2", :title => "title2", :researchers => "res2")
+        @project.study_keys = ["study1", "study2"]
+      end
+
+      it "should have many study keys" do
+        @project.study_keys[0].should == "study1"
+        @project.study_keys[1].should == "study2"
+      end
+
+      it "should have many studies" do
+        studies = @project.studies
+        studies.length.should == 2
+        studies[0].title.should == "title1"
+        studies[1].title.should == "title2"
+      end
+    end
+  end
 end
 

@@ -7,6 +7,9 @@ class Project
   field :ends_at, :type => Date
   field :description
   field :technologies
+  field :study_keys, :type => Array
+
+  index :key, :unique => true
 
   validates :key, :presence => true
   validates :name, :presence => true
@@ -30,6 +33,15 @@ class Project
   def next
     projects = Project.criteria.and(:starts_at.gt => starts_at.to_time, :key.ne => key).order_by([:starts_at, :asc])
     return projects[0]
+  end
+
+  def studies
+    s = []
+    return s unless study_keys
+    study_keys.each do |study_key|
+      s << Study.find(:first, :conditions => {:key => study_key})
+    end
+    return s
   end
 
   def self.past_projects

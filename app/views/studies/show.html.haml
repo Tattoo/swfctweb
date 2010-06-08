@@ -1,0 +1,26 @@
+- box do
+  %hgroup
+    %h1
+      =@study.title
+
+  %span.emphasis Researcher(s):
+  =@study.researchers
+
+  - if @study.research_methods
+    %br
+    %span.emphasis Research methods:
+    =@study.research_methods
+
+  - if @study.projects
+    %br
+    - count = 0
+    %span.emphasis Projects:
+    - @study.projects.each do |project|
+      ="," if count > 0
+      =link_to project.name, "/projects/#{project.key}"
+      - count = count + 1
+
+  %br
+  
+  %hr
+  =render :partial => @study.key rescue nil

@@ -22,6 +22,15 @@
   - else
     To be announced.
 
+  - if @project.studies
+    %br
+    - count = 0
+    %span.emphasis Research:
+    - @project.studies.each do |study|
+      ="," if count > 0
+      =link_to study.title, "/studies/#{study.key}"
+      - count = count + 1
+
   - if @project.upcoming?
     %br
     %br
