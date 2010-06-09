@@ -4,6 +4,7 @@
     %title Software Factory
     = javascript_include_tag "jquery-1.4.1.min.js"
     = javascript_include_tag "jquery.lightbox-0.5.pack.js"
+    = javascript_include_tag "jquery.jgfeed-min.js"
     :javascript
       $(document).ready(function(){
         // protect email addresses from spam bots
@@ -20,7 +21,24 @@
           imageBtnNext: '/images/lightbox-btn-next.gif'
         });
 
+
+        if (("$main_news")){
+          jQuery.jGFeed('http://blogs.cs.helsinki.fi/softwarefactory/feed/',
+            function(feed){
+              var html = "";
+              for each (var item in feed.entries){
+                html += '<a href="' + item.link + '" target="_blank">'+ item.title +'</a> <span>on '+ 
+                  cleanDate(item.publishedDate) + '</span><br />';
+              }
+              $("#main_news > section > hgroup").after(html);
+            }, 
+          5);
+        }
       });
+      function cleanDate(dateString){
+        var pattern = /\d\d:\d\d/;
+        return dateString.split(pattern)[0].trim();
+      }
     = stylesheet_link_tag "style"
     = stylesheet_link_tag "jquery.lightbox-0.5"
 
