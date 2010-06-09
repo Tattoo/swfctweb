@@ -75,14 +75,16 @@ footer {
 
 
   & > section {
-    width: 45em;
+    width: 45.6em;
     margin-left: auto;
     margin-right: auto;
+    height: 2.6em;
 
-    & > section {
+    & > span {
+      display: inline-block;
       width: 15em;
-      float: left;
       text-align: center;
+      vertical-align: middle;
     }
   }
 

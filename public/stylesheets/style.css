@@ -56,13 +56,15 @@ footer {
   -khtml-opacity: 0.75;
   opacity: 0.75; }
   footer > section {
-    width: 45em;
+    width: 45.6em;
     margin-left: auto;
-    margin-right: auto; }
-    footer > section > section {
+    margin-right: auto;
+    height: 2.6em; }
+    footer > section > span {
+      display: inline-block;
       width: 15em;
-      float: left;
-      text-align: center; }
+      text-align: center;
+      vertical-align: middle; }
   footer a {
     color: #ff8500;
     font-size: 0.8em;
