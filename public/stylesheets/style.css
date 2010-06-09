@@ -391,8 +391,8 @@ article.project-desc > section {
     margin-bottom: 0.5em; }
 
 #opening-box {
-  overflow: auto;
-  text-align: left; }
+  text-align: left;
+  margin-top: -5px; }
 
 .opening_column {
   width: 48%; }
