@@ -19,6 +19,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 section, article, aside, header, footer, nav, dialog, figure {
   display: block; }
 
+html, body {
+  height: 100%; }
+
 body {
   background: url(/images/bg-4.jpg) fixed center center;
   font-family: helvetica; }
@@ -39,13 +42,13 @@ header {
     margin-right: auto; }
 
 footer {
-  width: 58em;
+  width: 100%;
   margin-top: 2em;
   background-color: #fdfdfd;
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: absolute;
   bottom: 0;
   -moz-border-radius-topleft: 10px;
   -moz-border-radius-topright: 10px;
@@ -56,10 +59,9 @@ footer {
   -khtml-opacity: 0.75;
   opacity: 0.75; }
   footer > section {
-    width: 45.6em;
+    width: 46em;
     margin-left: auto;
-    margin-right: auto;
-    height: 2.6em; }
+    margin-right: auto; }
     footer > section > span {
       display: inline-block;
       width: 15em;
@@ -71,7 +73,10 @@ footer {
     font-weight: lighter; }
 
 #header_logo {
-  float: left; }
+  float: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 194px; }
 
 #slogan-image {
   display: block;
@@ -116,10 +121,17 @@ footer {
   background: url(/images/sprite.png) no-repeat -449px -41px;
   margin-right: .3em; }
 
-#main-content {
+#main-wrapper {
   width: 60em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative;
+  min-height: 100%;
+  margin-top: -6px; }
+
+#main-content {
+  overflow: auto;
+  margin-bottom: 1em; }
 
 .box {
   width: 100%;
@@ -129,6 +141,7 @@ footer {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 1em 0em;
+  margin-bottom: 1em;
   filter: alpha(opacity=85);
   -moz-opacity: 0.85;
   -khtml-opacity: 0.85;
@@ -155,13 +168,15 @@ footer {
     list-style-type: none; }
 
 #left-column {
-  margin-top: -6px;
+  display: block;
   float: left;
   width: 35em;
   margin-left: 1em; }
+  #left-column > img {
+    margin-top: -1em;
+    margin-bottom: 1em; }
 
 #right-column {
-  margin-top: -6px;
   float: right;
   width: 20em;
   margin-right: 1em; }
@@ -229,7 +244,7 @@ article.intro > section {
 .multi-column {
   float: left;
   width: 260px;
-  margin: -5px 1em 0 1em; }
+  margin: 0 1em; }
 
 .clear {
   clear: both; }
@@ -291,33 +306,31 @@ article.project-desc > section {
       font-size: 0.8em;
       width: 32em; }
 
-#contact-box {
-  margin-top: -6px; }
-  #contact-box:after {
-    clear: both;
-    display: block;
-    height: 0;
-    content: ".";
-    visibility: hidden; }
-  #contact-box > section > form {
-    margin-left: auto;
-    margin-right: auto;
-    width: 35em; }
-    #contact-box > section > form > label {
-      width: 7em;
-      text-align: right;
-      float: left; }
-    #contact-box > section > form > input, #contact-box > section > form > textarea {
-      width: 27em;
-      margin-left: 1em;
-      float: left;
-      margin-bottom: 1em; }
-    #contact-box > section > form > textarea {
-      width: 30em;
-      height: 10em; }
-    #contact-box > section > form > input[type="submit"] {
-      width: 6em;
-      margin-left: 9.5em; }
+#contact-box:after {
+  clear: both;
+  display: block;
+  height: 0;
+  content: ".";
+  visibility: hidden; }
+#contact-box > section > form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 35em; }
+  #contact-box > section > form > label {
+    width: 7em;
+    text-align: right;
+    float: left; }
+  #contact-box > section > form > input, #contact-box > section > form > textarea {
+    width: 27em;
+    margin-left: 1em;
+    float: left;
+    margin-bottom: 1em; }
+  #contact-box > section > form > textarea {
+    width: 30em;
+    height: 10em; }
+  #contact-box > section > form > input[type="submit"] {
+    width: 6em;
+    margin-left: 9.5em; }
 
 #education_bubble {
   position: relative;
@@ -373,7 +386,7 @@ article.project-desc > section {
   text-align: center; }
 
 #vision-box {
-  margin: -5px 1em 0 1em; }
+  margin: 0 1em; }
 
 #vision-pic {
   display: block;

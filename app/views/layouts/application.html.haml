@@ -58,18 +58,19 @@
 
         %a{:href => contact_path, :id => "contact-link"}
 
-    %section#main-content
-      = yield
+    %section#main-wrapper
+      %section#main-content
+        = yield
 
 
-    %br.clear
-    %footer
-      %section
-        %span
-          %a{:href => "http://www.cloudsoftwareprogram.org/", :target => "_blank"} Cloud Software Program
-        %span
-          %a{:href => "http://www.tivit.fi/en/"} Tieto- ja viestintäteollisuuden tutkimus TIVIT Oy
-        %span
-          %a{:href => "http://cs.helsinki.fi/en/"}
-            Department of Computer Science,
-            University of Helsinki
+      %br.clear
+      %footer
+        %section
+          %span
+            %a{:href => "http://www.cloudsoftwareprogram.org/", :target => "_blank"} Cloud Software Program
+          %span
+            %a{:href => "http://www.tivit.fi/en/"} Tieto- ja viestintäteollisuuden tutkimus TIVIT Oy
+          %span
+            %a{:href => "http://cs.helsinki.fi/en/"}
+              Department of Computer Science,
+              University of Helsinki

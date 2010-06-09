@@ -18,9 +18,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
+
 /* reset for html5-specific elements */
 section, article, aside, header, footer, nav, dialog, figure {
   display: block; 
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -52,16 +57,15 @@ footer {
   $opacity-filter: 75;
   $opacity: $opacity-filter / 100; // 65 => 0.65
  
-  width: 58em;
+  width: 100%;
   margin-top: 2em;
   background-color: #fdfdfd;  
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
 
-  position: relative;
+  position: absolute;
   bottom: 0;
-
 
   -moz-border-radius-topleft: $radius;
   -moz-border-radius-topright: $radius;
@@ -75,10 +79,9 @@ footer {
 
 
   & > section {
-    width: 45.6em;
+    width: 46em;
     margin-left: auto;
     margin-right: auto;
-    height: 2.6em;
 
     & > span {
       display: inline-block;
@@ -97,6 +100,9 @@ footer {
 
 #header_logo {
   float: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 194px;
 }
 
 #slogan-image {
@@ -158,10 +164,19 @@ footer {
   margin-right: .3em;
 }
 
-#main-content {
+
+#main-wrapper {
   width: 60em;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  min-height: 100%;
+  margin-top: -6px;
+}
+
+#main-content {
+  overflow: auto;
+  margin-bottom: 1em;
 }
 
 .box {
@@ -177,6 +192,8 @@ footer {
   border-radius: $radius;
 
   padding: 1em 0em;
+  margin-bottom: 1em;
+
 
   filter:alpha(opacity=$opacity-filter);
   -moz-opacity: $opacity;
@@ -219,14 +236,18 @@ footer {
 }
 
 #left-column {
-  margin-top: -6px;
+  display: block;
   float: left;
   width: 35em;
   margin-left: 1em;
+
+  & > img {
+    margin-top: -1em;
+    margin-bottom: 1em;
+  }
 }
 
 #right-column {
-  margin-top: -6px;
   float: right;
   width: 20em;
   margin-right: 1em;
@@ -314,7 +335,7 @@ article.intro > section {
 .multi-column {
   float: left;
   width: 260px;
-  margin: -5px 1em 0 1em;
+  margin: 0 1em;
 }
 
 .clear {
@@ -408,7 +429,6 @@ article.project-desc > section {
 }
 
 #contact-box {
-  margin-top: -6px;
 
   &:after {
     clear: both;
@@ -514,7 +534,7 @@ article.project-desc > section {
 }
 
 #vision-box {
-  margin: -5px 1em 0 1em;
+  margin: 0 1em;
 }
 
 #vision-pic {
