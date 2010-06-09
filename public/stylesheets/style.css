@@ -15,6 +15,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
   background: transparent; }
 
+ol, ul {
+  margin: 1em; }
+
 /* reset for html5-specific elements */
 section, article, aside, header, footer, nav, dialog, figure {
   display: block; }
