@@ -29,7 +29,7 @@ studies = [
     :project_keys => ["gnobles", "yfactor"]},
   {:key => "gradu_elena", :title => "Kanban study", :researchers => "Elena Pirinen",
     :research_methods => "Direct observation, video observation, thematic interviews",
-    :description => "Master's thesis of how Kanban's influence on software developer's work and how value flows in Kanban.",
+    :description => "Master's thesis of the impacts of Kanban on software developer's work and how value flows in Kanban.",
     :project_keys => ["gnobles"]},
   {:key => "psycho", :title => "Psychological research",
     :researchers => "Markku Verkasalo, Sointu Leikas, Jan-Erik Lonnqvist, Ville Ilmarinen (Institute of Behavioural Sciences, Department of Psychology, University of Helsinki)",
