@@ -41,7 +41,7 @@
         %br
         %section{:class => "intro_person-left"} 
           = image_tag "contact/jussi.png", :align => "left"
-          %a.email{:href => "#", :rel => "jussi@autere.com"} Dr. Jussi Autere 
+          !=email_link("jussi@autere.com", "Jussi Autere")
           from Gearshift Group
 
   = image_tag "bubble-entrepreneur.png", :id => "entrepreneurship_bubble"

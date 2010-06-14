@@ -7,10 +7,12 @@ class Study
   field :research_methods
   field :project_keys, :type => Array
   field :description
+  field :contact_email
+  field :contact_text
 
   #index :key, :unique => true
 
-  validates_presence_of [:key, :title, :researchers]
+  validates_presence_of [:key, :title, :researchers, :contact_email, :contact_text]
 
   def projects
     p =[]

@@ -8,6 +8,8 @@ class Project
   field :description
   field :technologies
   field :study_keys, :type => Array
+  field :contact_email
+  field :contact_text
 
   validates :key, :presence => true
   validates :name, :presence => true

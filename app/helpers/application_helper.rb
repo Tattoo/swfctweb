@@ -32,4 +32,9 @@ module ApplicationHelper
     link_to "Register", "http://ilmo.cs.helsinki.fi", :id => "projects_register-link", :target => "_blank"
   end
 
+  def email_link(address, text)
+    a = address.gsub("@", "(replace at)")
+    return "<a class='email' rel='#{a}'>#{text}</a>"
+  end
+
 end
