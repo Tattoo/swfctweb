@@ -207,8 +207,8 @@ describe Project do
 
     describe "exists" do
       before do
-        Study.create!(:key => "study1", :title => "title1", :researchers => "res1", :contact_email => "test@study.com")
-        Study.create!(:key => "study2", :title => "title2", :researchers => "res2", :contact_email => "test@study.com")
+        Study.create!(:key => "study1", :title => "title1", :researchers => "res1", :contact_email => "test@study.com", :contact_text => "Some Guy")
+        Study.create!(:key => "study2", :title => "title2", :researchers => "res2", :contact_email => "test@study.com", :contact_text => "Some Guy")
         @project.study_keys = ["study1", "study2"]
       end
 

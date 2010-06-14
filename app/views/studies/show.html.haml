@@ -14,7 +14,7 @@
 
   %br
   %span.emphasis Contact:
-  !=email_link(@study.contact_email, @study.researchers)
+  !=email_link(@study.contact_email, @study.contact_text)
 
   - if @study.research_methods
     %br

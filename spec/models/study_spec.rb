@@ -6,7 +6,8 @@ describe Study do
       :key => "test_study",
       :title => "Test study",
       :researchers => "PhD Test Guy, MSc Test Lady",
-      :contact_email => "test@study.com"
+      :contact_email => "test@study.com",
+      :contact_text => "Some Guy"
     }
     @study = Study.new(@valid_attrs)
   end
@@ -37,6 +38,11 @@ describe Study do
 
     it "should require contact email" do
       @study.contact_email = ""
+      @study.should_not be_valid
+    end
+
+    it "should require contact text" do
+      @study.contact_text = ""
       @study.should_not be_valid
     end
   end
