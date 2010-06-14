@@ -18,7 +18,7 @@ projects = [
 
 Project.destroy_all # remove this if an admin page for projects is created
 projects.each do |project|
-  Project.create(project) unless Project.find(:first, :conditions => {:key => project[:key]})
+  Project.create!(project) unless Project.find(:first, :conditions => {:key => project[:key]})
 end
 
 # studies
@@ -26,24 +26,28 @@ studies = [
   {:key => "gradu_henri", :title => "Self-organizing software development teams", :researchers => "Henri Karhatsu",
     :research_methods => "Participant observation, thematic interviews",
     :description => "Master's thesis of building self-organizing software development teams.",
+    :contact_email => "henri.karhatsu@karhatsu.com",
     :project_keys => ["gnobles", "yfactor"]},
   {:key => "gradu_elena", :title => "Kanban study", :researchers => "Elena Pirinen",
     :research_methods => "Direct observation, video observation, thematic interviews",
     :description => "Master's thesis of how Kanban's influence on software developer's work and how value flows in Kanban.",
+    :contact_email => "elena.pirinen@helsinki.fi",
     :project_keys => ["gnobles"]},
   {:key => "psycho", :title => "Psychological research",
     :researchers => "Markku Verkasalo, Sointu Leikas, Jan-Erik Lonnqvist, Ville Ilmarinen (Institute of Behavioural Sciences, Department of Psychology, University of Helsinki)",
     :research_methods => "Self-reports of personality, work stress, mood, and work satisfaction via questionnaires. Experience sampling of self-report ratings of social interactions via palmtop computers. Video observation.",
     :description => "Examining basic relations between objective features of a situation, subjective experience of a situation, personality, affect, and behavior.",
+    :contact_email => "sointu.leikas@helsinki.fi",
     :project_keys => ["gnobles", "yfactor", "planesweep"]},
   {:key => "waste_marko", :title => "Finding waste", :researchers => "Marko Ikonen",
     :research_methods => "Direct observation, thematic interviews",
+    :contact_email => "marko.ikonen@cs.helsinki.fi",
     :project_keys => ["gnobles", "yfactor"]},
 ]
 
 Study.destroy_all # remove this if an admin page for studies is created
 studies.each do |study|
-  Study.create(study) unless Study.find(:first, :conditions => {:key => study[:key]})
+  Study.create!(study) unless Study.find(:first, :conditions => {:key => study[:key]})
 end
 
 # text fragments
@@ -51,5 +55,5 @@ keys_and_values = [
   ]
 
 keys_and_values.each do |pair|
-  TextFragment.create(:key => pair[0], :value => pair[1]) unless TextFragment.find(:first, :conditions => {:key => pair[0]})
+  TextFragment.create!(:key => pair[0], :value => pair[1]) unless TextFragment.find(:first, :conditions => {:key => pair[0]})
 end
