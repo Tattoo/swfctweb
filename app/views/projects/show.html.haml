@@ -15,6 +15,12 @@
   =format_date(@project.starts_at)
   \-
   =format_date(@project.ends_at)
+
+  -if @project.contact_email and @project.contact_text
+    %br
+    %span.emphasis Contact:
+    !=email_link(@project.contact_email, @project.contact_text)
+
   %br
   %span.emphasis Technologies / tools / methods:
   - if @project.technologies
