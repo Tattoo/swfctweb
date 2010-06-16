@@ -22,15 +22,23 @@
         });
 
 
-        if (("$main_news")){
+        if ($("#main_news").length > 0) {
           jQuery.jGFeed('http://blogs.cs.helsinki.fi/softwarefactory/feed/',
             function(feed){
-              var html = "";
-              for each (var item in feed.entries){
-                html += '<a href="' + item.link + '" target="_blank">'+ item.title +'</a> <span>on '+ 
-                  cleanDate(item.publishedDate) + '</span><br />';
+
+              if (feed.entries.length > 0) {
+
+                var html = "";
+                for each (var item in feed.entries){
+                  html += '<a href="' + item.link + '" target="_blank">'+ item.title +'</a> <span>on '+ 
+                    cleanDate(item.publishedDate) + '</span><br />';
+                }
+
+                $("#main_news > section > hgroup").after(html);
+
+              } else {
+                $("#main_news").hide();
               }
-              $("#main_news > section > hgroup").after(html);
             }, 
           5);
         }
