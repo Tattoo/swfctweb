@@ -22,7 +22,7 @@
         });
 
 
-        if ($("#main_news").length > 0) {
+        if ($("#main_news").length > 0 && !jQuery.browser.msie) {
           jQuery.jGFeed('http://blogs.cs.helsinki.fi/softwarefactory/feed/',
             function(feed){
 
@@ -43,8 +43,11 @@
               }
             }, 
           5);
+        } else {
+          $("#main_news").hide();
         }
       });
+
       function cleanDate(dateString){
         var pattern = /\d\d:\d\d/;
         return dateString.split(pattern)[0].trim();
