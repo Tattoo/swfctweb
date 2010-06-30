@@ -489,6 +489,9 @@ article.project-desc > section {
   top: 33.4em;
   left: 30em;
   text-align: center; }
+  #slogan_convert > .slogan_ie {
+    position: relative;
+    top: -0.5em; }
 
 #slogan_practical {
   position: absolute;
