@@ -42,8 +42,10 @@
       into a business idea
 
     %div#slogan_practical.slogan
-      Practical research
-
+      :erb
+        <!--[if IE]><div class=".slogan_ie"><![endif]-->
+        Practical research
+        <!--[if IE]></div><![endif]-->     
     %div#slogan_env.slogan
       %i Unique
       and
