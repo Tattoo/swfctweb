@@ -466,7 +466,7 @@ article.project-desc > section {
 #slogan_paper {
   position: absolute;
   top: 27em;
-  left: 23.4em; }
+  left: 23.72em; }
 
 #slogan_team {
   position: absolute;
@@ -480,8 +480,8 @@ article.project-desc > section {
 
 #slogan_proto {
   position: absolute;
-  top: 41em;
-  left: 35em;
+  top: 41.5em;
+  left: 35.5em;
   text-align: center; }
 
 #slogan_convert {
@@ -492,7 +492,7 @@ article.project-desc > section {
 
 #slogan_practical {
   position: absolute;
-  top: 27.2em;
+  top: 27em;
   left: 36em; }
 
 #slogan_env {
