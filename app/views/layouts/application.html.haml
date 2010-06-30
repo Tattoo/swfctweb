@@ -29,7 +29,9 @@
               if (feed.entries.length > 0) {
 
                 var html = "";
-                for each (var item in feed.entries){
+
+                for (var i = 0; i < feed.entries.length; i++)
+                  var item = feed.entries[i];
                   html += '<a href="' + item.link + '" target="_blank">'+ item.title +'</a> <span>on '+ 
                     cleanDate(item.publishedDate) + '</span><br />';
                 }
