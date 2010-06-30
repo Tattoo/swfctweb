@@ -5,8 +5,23 @@
     = javascript_include_tag "jquery-1.4.1.min.js"
     = javascript_include_tag "jquery.lightbox-0.5.pack.js"
     = javascript_include_tag "jquery.jgfeed-min.js"
+    /[if IE]
+      :javascript
+        // create HTML5 support for IE
+        var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+        "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+        "progress,section,time,video").split(',');
+
+        for (var i = 0; i < e.length; i++) {
+          document.createElement(e[i]);
+        }
+
     :javascript
       $(document).ready(function(){
+
+
+
+
         // protect email addresses from spam bots
         $("a.email").each(function(){
           this.href = "mailto:" + this.rel.replace('(replace at)', "@");
