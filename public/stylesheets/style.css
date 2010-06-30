@@ -496,6 +496,7 @@ article.project-desc > section {
   left: 36em; }
   #slogan_practical > .slogan_ie {
     position: absolute;
+    width: auto;
     top: -1em; }
 
 #slogan_env {
