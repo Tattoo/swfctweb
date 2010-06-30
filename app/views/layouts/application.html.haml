@@ -19,7 +19,8 @@
     :javascript
       $(document).ready(function(){
 
-
+        $(".slogan").hide();
+        switchSlogan(0);
 
 
         // protect email addresses from spam bots
@@ -67,6 +68,32 @@
         var pattern = /\d\d:\d\d/;
         return dateString.split(pattern)[0].trim();
       }
+
+      function switchSlogan(next) {
+        var elements = $(".slogan");
+        var TIMEOUT = 2000;
+        var nextIndex = null; 
+
+        if (next === 0){
+          prev = elements.length - 1;
+        } else {
+          prev = next - 1
+        }
+
+        $(elements[prev]).fadeOut("slow", function(){
+          $(elements[next]).fadeIn("slow");
+        });
+
+        if (next + 1 === elements.length) {
+          nextIndex = 0;
+        } else {
+          nextIndex = next + 1;
+        }
+
+        setTimeout("switchSlogan(" + nextIndex + ")", TIMEOUT);
+
+      }
+  
     = stylesheet_link_tag "style"
     = stylesheet_link_tag "jquery.lightbox-0.5"
 

@@ -355,7 +355,7 @@ article.intro > section {
 .main_aspects {
   float: left; 
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 2.5em;
   & > a {
     font-size: 3em;
   }
@@ -364,17 +364,21 @@ article.intro > section {
 }
 
 #main_edu-link {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #main_res-link {
-  margin-top: 2em;
+  margin-top: 1em;
   float: right;
 }
 
 #main_ent-link {
   width: 100%;
   text-align: center;
+
+  & > .main_slogan {
+    margin-top: -6px;
+  }
 }
 
 #aspects-box {
@@ -562,8 +566,12 @@ article.project-desc > section {
     margin-bottom: 0;
   }
 
-  & > hgroup h2 {
-    margin-bottom: 0.5em;
+  & > hgroup {
+    margin-bottom: 0em;
+
+    & > h2 {
+      margin-bottom: 0.5em;
+    }
   }
 }
 
@@ -637,4 +645,59 @@ article.project-desc > section {
   & + span {
     font-size: 70%;
   }
+}
+
+.slogan {
+  z-index: 2;
+  font-size: 0.7em;
+}
+
+#slogan_paper {
+  position: absolute;
+  top: 27em;
+  left: 23.4em;
+}
+
+#slogan_team {
+  position: absolute;
+  top: 32.7em;
+  left: 2em;
+}
+
+#slogan_job {
+  position: absolute;
+  top: 34.2em;
+  left: 10em; 
+}
+
+#slogan_proto {
+  position: absolute;
+  top: 41em;
+  left: 35em;
+  text-align: center;
+}
+
+#slogan_convert {
+  position: absolute;
+  top: 33.4em;
+  left: 30em;
+  text-align: center;
+}
+
+#slogan_practical {
+  position: absolute;
+  top: 27.2em;
+  left: 36em; 
+}
+
+#slogan_env {
+  position: absolute;
+  top: 32.2em;
+  left: 29.8em;
+}
+
+#slogan_real {
+  position: absolute;
+  top: 32.4em;
+  left: 13em;
 }
