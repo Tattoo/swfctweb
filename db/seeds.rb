@@ -48,11 +48,11 @@ studies = [
     :contact_email => "sointu.leikas@helsinki.fi",
     :contact_text => "Sointu Leikas",
     :project_keys => ["gnobles", "yfactor", "planesweep"]},
-  {:key => "waste_marko", :title => "Finding waste", :researchers => "Marko Ikonen",
-    :research_methods => "Direct observation, thematic interviews",
+  {:key => "waste_marko", :title => "Beyond project waste", :researchers => "Marko Ikonen",
+    :research_methods => "Direct observation, thematic interviews, video observation, questionnaires",
     :contact_email => "marko.ikonen@cs.helsinki.fi",
     :contact_text => "Marko Ikonen",
-    :project_keys => ["gnobles", "yfactor"]},
+    :project_keys => ["gnobles", "yfactor", "planesweep"]},
 ]
 
 Study.destroy_all # remove this if an admin page for studies is created
