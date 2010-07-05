@@ -52,7 +52,8 @@ studies = [
     :research_methods => "Direct observation, thematic interviews, video observation, questionnaires",
     :contact_email => "marko.ikonen@cs.helsinki.fi",
     :contact_text => "Marko Ikonen",
-    :project_keys => ["gnobles", "yfactor", "planesweep"]},
+    :project_keys => ["gnobles", "yfactor", "planesweep"],
+    :description => "When the customer value is the most important"},
 ]
 
 Study.destroy_all # remove this if an admin page for studies is created
