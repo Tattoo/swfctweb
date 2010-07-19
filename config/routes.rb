@@ -11,6 +11,7 @@ Swfctweb::Application.routes.draw do |map|
   match 'magazines' => "statics#magazines" 
   match "guide" => "statics#guide"
   match 'openingday' => "statics#launch_event"
+  match 'gnobles', :to => redirect('http://gnobles.softwarefactory.cc')
 
   resource :index, :controller => :index
 
