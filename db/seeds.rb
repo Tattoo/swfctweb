@@ -14,11 +14,17 @@ projects = [
     :study_keys => ["psycho", "waste_marko", "gradu_henri"]},
   {:key => "planesweep", :name => "Planesweep", :starts_at => "2010-05-17", :ends_at => "2010-07-02",
     :description => "Airplane cleaning management system.",
-    :technologies => "Scala, Lift, CouchDB, Javascript, TDD, Kanban",
+    :technologies => "Scala, Lift, CouchDB, JavaScript, TDD, Kanban",
     :contact_email => "esko.luontola@cs.helsinki.fi",
     :contact_text => "Esko Luontola",
-    :study_keys => ["psycho"]},
-  {:key => "autumn2010-1", :name => "Autumn 1", :starts_at => "2010-09-06", :ends_at => "2010-10-21"},
+    :study_keys => ["psycho", "waste_marko"]},
+  {:key => "ee-potd", :name => "Event Experience", :starts_at => "2010-09-06", :ends_at => "2010-10-21",
+    :description => "Event Experience is a new business innovation that utilizes social networks and open APIs. Event Experience Facebook application combines social networks and open APIs to provide a unified event experience.",
+    :technologies => "Python, Django, JavaScript, Sonera API, Facebook Developers, TDD, Kanban",
+    :contact_email => "vesa.suikkola@tkk.fi",
+    :contact_text => "Vesa Suikkola",
+    :study_keys => ["psycho", "waste_marko"]
+  },
   {:key => "autumn2010-2", :name => "Autumn 2", :starts_at => "2010-11-01", :ends_at => "2010-12-17"},
 ]
 
@@ -47,12 +53,12 @@ studies = [
     :description => "Examining basic relations between objective features of a situation, subjective experience of a situation, personality, affect, and behavior.",
     :contact_email => "sointu.leikas@helsinki.fi",
     :contact_text => "Sointu Leikas",
-    :project_keys => ["gnobles", "yfactor", "planesweep"]},
+    :project_keys => ["gnobles", "yfactor", "planesweep", "ee-potd"]},
   {:key => "waste_marko", :title => "Beyond project waste", :researchers => "Marko Ikonen",
     :research_methods => "Direct observation, thematic interviews, video observation, questionnaires",
     :contact_email => "marko.ikonen@cs.helsinki.fi",
     :contact_text => "Marko Ikonen",
-    :project_keys => ["gnobles", "yfactor", "planesweep"],
+    :project_keys => ["gnobles", "yfactor", "planesweep, ee-potd"],
     :description => "When the customer value is the most important"},
 ]
 
